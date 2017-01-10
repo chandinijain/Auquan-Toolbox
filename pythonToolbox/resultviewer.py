@@ -10,10 +10,16 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.ticker as mtick
 
-import Tkinter as tk
-import ttk
-import tkFont
-import tkMessageBox
+try:
+    import Tkinter as tk
+    import ttk
+    import tkFont
+    import tkMessageBox
+except:
+    import tkinter as tk
+    from tkinter import ttk
+    from tkinter import font as tkFont
+    from tkinter import messagebox as tkMessageBox
 
 from pythonToolbox.metrics import metrics, baseline
 from pythonToolbox.dataloader import data_available
@@ -96,12 +102,11 @@ def loadgui(daily_pnl, total_pnl, position, exchange, base_index, budget,logger)
         position_plot.xaxis.set_major_formatter(mdates.DateFormatter('%b-%y'))
         position_plot.xaxis.set_major_locator(mdates.MonthLocator())
         position_plot.set_xlabel('TIME')
-    	daily_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
-    	total_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
+        daily_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
+        total_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
         daily_plot.set_ylabel('Daily Performance')
         total_plot.set_ylabel('Cumulative Performance')
         position_plot.set_ylabel('Long/Short')
-        
 
         plt.gcf().canvas.draw()
 

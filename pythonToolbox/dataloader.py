@@ -90,8 +90,12 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
             csv = csv.reindex(index=csv.index[::-1])
             features = [col.upper() for col in csv.columns]
             for feature in features:
-                if not(back_data.has_key(feature)):
-                    back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
+                try:
+                    if not(back_data.has_key(feature)):
+                        back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
+                except:
+                    if feature not in back_data:
+                        back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
                 back_data[feature][market] = csv[feature][date_range]
 
         dates_to_drop = pd.Series(False, index=date_range)
