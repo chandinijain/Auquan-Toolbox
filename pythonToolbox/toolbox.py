@@ -229,8 +229,12 @@ def writecsv(back_data,budget):
 
     results = results.sort_index(axis=0,ascending=False)
     csv_dir = 'runLogs/'
-    csv_file =  open('%srun-%s.csv'%(csv_dir, dt.datetime.now().strftime('%Y-%m-%d %H-%M-%S')), 'wb')
-    results.to_csv(csv_file)
+    try:
+        csv_file =  open('%srun-%s.csv'%(csv_dir, dt.datetime.now().strftime('%Y-%m-%d %H-%M-%S')), 'wb')
+        results.to_csv(csv_file)
+    except:
+        csv_file =  open('%srun-%s.csv'%(csv_dir, dt.datetime.now().strftime('%Y-%m-%d %H-%M-%S')), 'w')
+        results.to_csv(csv_file)
     # writer = csv.writer(csv_file)
     # writer.writerow(['Dates']+back_data['DAILY_PNL'].index.format())
     # writer.writerow(['Daily Pnl']+daily_return.sum(axis=1).values.tolist())
