@@ -33,6 +33,25 @@ def data_available(exchange, markets,logger):
                 raise      
     return True
 
+def download_security_list(exchange, logger):
+    dir_name = '%s/'%exchange.lower()
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
+
+    file_name = '%s%s.txt'%(dir_name, exchange.lower())
+    if not os.path.exists(file_name):
+        url = 'https://raw.githubusercontent.com/Auquan/auquan-historical-data/master/%s'%(file_name)
+        status = urlopen(url).getcode()
+        if status == 200:
+            logger.info('Downloading data to file: %s'%file_name)
+            urlretrieve(url, file_name)
+            return True
+        else:
+            logger.info('File not found. Please check exchange settings!')
+        return False
+    else:
+        return True
+
 def load_data(exchange, markets, start, end, lookback, logger, random=False):
 
     logger.info("Loading Data from %s to %s...."%(start,end))
@@ -42,6 +61,15 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
     except ValueError:
         logger.exception("%s or %s is not valid date. Please check settings!"%(start, end))
         raise ValueError("%s or %s is not valid date. Please check settings!"%(start, end))
+
+    #Download list of securities
+    assert(download_security_list(exchange, logger))
+    if len(markets)==0:
+        file_name = '%s/%s.txt'%(exchange.lower(), exchange.lower())
+        
+        markets = [line.strip() for line in open(file_name)]
+        # with open(file_name) as f:
+        #     markets = f.read().splitlines()
 
     markets = [m.upper() for m in markets]
     features = ['OPEN', 'CLOSE', 'HIGH', 'LOW', 'VOLUME']
