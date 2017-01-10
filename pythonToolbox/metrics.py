@@ -5,29 +5,22 @@ from pandas.tseries.offsets import BDay
 from pythonToolbox.dataloader import data_available
 import matplotlib.pyplot as plt
 
-def metrics(case,daily_pnl, total_pnl, baseline_data):
+def metrics(daily_pnl, total_pnl, baseline_data):
 
     stats = {}
     daily_return = daily_pnl.sum(axis=1)
     total_return = total_pnl.sum(axis=1)
 
-    if case !=3:
-        stats['Total Pnl']=(total_pnl.iloc[total_pnl.index.size-1].sum())
-        stats['Max Drawdown']=max_drawdown(daily_return)
-        stats['Profit Factor']=profit_factor(daily_return)
-        stats['% Profitable']=profit_percent(daily_return)
-
-    if case == 3:
-        stats['Total Pnl(%)'] = (total_pnl.iloc[total_pnl.index.size-1].sum())
-        stats['Annual Return(%)'] = annualized_return(daily_return)
-        stats['Base Return(%)'] = annualized_return(baseline_data['DAILY_PNL'])
-        stats['Annual Vol(%)']=annual_vol(daily_return)
-        stats['Beta'] = beta(daily_return,baseline_data['DAILY_PNL'])
-        stats['Sharpe Ratio'] = sharpe_ratio(daily_return)
-        stats['Sortino Ratio'] = sortino_ratio(daily_return)
-        stats['Max Drawdown(%)']=max_drawdown(daily_return)
-        stats['Profit Factor']=profit_factor(daily_return)
-        stats['% Profitable']=profit_percent(daily_return)
+    stats['Total Pnl(%)'] = (total_pnl.iloc[total_pnl.index.size-1].sum())
+    stats['Annual Return(%)'] = annualized_return(daily_return)
+    stats['Base Return(%)'] = annualized_return(baseline_data['DAILY_PNL'])
+    stats['Annual Vol(%)']=annual_vol(daily_return)
+    stats['Beta'] = beta(daily_return,baseline_data['DAILY_PNL'])
+    stats['Sharpe Ratio'] = sharpe_ratio(daily_return)
+    stats['Sortino Ratio'] = sortino_ratio(daily_return)
+    stats['Max Drawdown(%)']=max_drawdown(daily_return)
+    stats['Profit Factor']=profit_factor(daily_return)
+    stats['% Profitable']=profit_percent(daily_return)
         # stats = 'Total Pnl        : %0.2f'%(total_pnl.iloc[total_pnl.index.size-1].sum()) + '\t' + \
         #         'Annualized Return: %0.2f%%'%annualized_return(daily_return) + '\t' + \
         #         'Benchmark Return : %0.2f%%'%annualized_return(baseline_data['DAILY_PNL']) + '\t' + \
@@ -99,11 +92,11 @@ def profit_percent(daily_return):
     upside_return[upside_return > 0]= 1
     return upside_return.sum()/total_return.sum()
 
-def baseline(exchange, base_index, date_range):
+def baseline(exchange, base_index, date_range,logger):
     features = ['OPEN', 'CLOSE']
     baseline_data = {}
 
-    assert data_available(exchange, [base_index])
+    assert data_available(exchange, [base_index],logger)
     csv = pd.read_csv('%s/historicalData/%s.csv'%(exchange.lower(),base_index.lower()), index_col=0)
     csv.index = pd.to_datetime(csv.index)
     csv.columns = [col.upper() for col in csv.columns]

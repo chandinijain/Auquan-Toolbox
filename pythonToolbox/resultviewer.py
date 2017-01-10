@@ -18,7 +18,7 @@ import tkMessageBox
 from pythonToolbox.metrics import metrics, baseline
 from pythonToolbox.dataloader import data_available
 
-def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
+def loadgui(daily_pnl, total_pnl, position, exchange, base_index, budget,logger):
 
     def isDate(val):
 
@@ -38,10 +38,10 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
         #Function to autoupdate chart on new selection from dropdown
         i = dropdown.current()
         market = ['TOTAL PORTFOLIO'] + daily_pnl.columns.values.tolist()
-        plot(case,daily_pnl, total_pnl, long_position, short_position, baseline_data, market[i],box_value2.get(), box_value3.get())
+        plot(daily_pnl, total_pnl, long_position, short_position, baseline_data, market[i],box_value2.get(), box_value3.get())
 
 
-    def plot(case,daily_pnl, total_pnl, long_position, short_position, baseline_data, market = 'TOTAL PORTFOLIO',start=daily_pnl.index.format()[0],end=daily_pnl.index.format()[-1]):
+    def plot(daily_pnl, total_pnl, long_position, short_position, baseline_data, market = 'TOTAL PORTFOLIO',start=daily_pnl.index.format()[0],end=daily_pnl.index.format()[-1]):
     
         #New plot when custom fields are changed
 
@@ -71,14 +71,10 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
         total_plot = plt.subplot2grid((10,8), (0,0), colspan = 10, rowspan = 4)
         daily_plot = plt.subplot2grid((10,8), (5,0), colspan = 10, rowspan = 2, sharex = total_plot)
         position_plot = plt.subplot2grid((10,8), (8,0), colspan = 10, rowspan = 2, sharex = total_plot)
-        if case !=3:
-            daily_plot.set_title('Daily PnL')
-            total_plot.set_title('Total PnL')
-
-        if case == 3:      
-            daily_plot.set_title('Daily % PnL')
-            total_plot.set_title('Total % PnL')
-            total_plot.plot(daily_pnl.index, base_pnl, 'g',linewidth=0.5, label='s&p500')
+      
+        daily_plot.set_title('Daily % PnL')
+        total_plot.set_title('Total % PnL')
+        total_plot.plot(daily_pnl.index, base_pnl, 'g',linewidth=0.5, label='s&p500')
 
         daily_plot.plot(daily_pnl.index, zero_line, 'k')
         daily_plot.bar(daily_pnl.index, daily_return.values, 0.2, align='center', color='c', label='strategy')
@@ -88,8 +84,8 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
         total_plot.legend(loc='upper left')
         position_plot.set_title('Daily Exposure')
         position_plot.plot(daily_pnl.index, zero_line, 'k')
-        position_plot.bar(daily_pnl.index, long_exposure.values, width=0.2, align='center', color='b', label='long')
-        position_plot.bar(daily_pnl.index, short_exposure.values, width=0.2, align='center', color='r', label='short')
+        position_plot.bar(daily_pnl.index, long_exposure.values, width=0.2, linewidth=0, align='center', color='b', label='long')
+        position_plot.bar(daily_pnl.index, short_exposure.values, width=0.2, linewidth=0, align='center', color='r', label='short')
         position_plot.legend(loc='upper left')
 
         daily_plot.autoscale(tight=True)
@@ -100,9 +96,8 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
         position_plot.xaxis.set_major_formatter(mdates.DateFormatter('%b-%y'))
         position_plot.xaxis.set_major_locator(mdates.MonthLocator())
         position_plot.set_xlabel('TIME')
-        if case ==3:
-        	daily_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
-        	total_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
+    	daily_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
+    	total_plot.yaxis.set_major_formatter(mtick.FuncFormatter(lambda y, _: '{:.0%}'.format(y)))
         daily_plot.set_ylabel('Daily Performance')
         total_plot.set_ylabel('Cumulative Performance')
         position_plot.set_ylabel('Long/Short')
@@ -117,7 +112,7 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
             d1 = pd.to_datetime(box_value2.get())
             d2 = pd.to_datetime(box_value3.get())
             if d1>=daily_pnl.index[0] and d2<=daily_pnl.index[-1]:
-                plot(case,daily_pnl, total_pnl, long_position, short_position, baseline_data, box_value.get(), box_value2.get(), box_value3.get())
+                plot(daily_pnl, total_pnl, long_position, short_position, baseline_data, box_value.get(), box_value2.get(), box_value3.get())
             else:
             	tkMessageBox.showinfo("Date out of Range", "Please enter a date from %s to %s"%(daily_pnl.index[0].strftime('%Y-%m-%d'),daily_pnl.index[-1].strftime('%Y-%m-%d')))
         except ValueError:
@@ -150,18 +145,21 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
     short_position = position.copy()
     short_position[short_position > 0]= 0
 
-    if case == 3:
-        daily_pnl = daily_pnl*100/budget
-        total_pnl = total_pnl*100/budget
+    daily_pnl = daily_pnl*100/budget
+    total_pnl = total_pnl*100/budget
 
-    baseline_data = baseline(exchange, base_index, total_pnl.index)
-    stats = metrics(case,daily_pnl, total_pnl, baseline_data)
+    baseline_data = baseline(exchange, base_index, total_pnl.index,logger)
+    stats = metrics(daily_pnl, total_pnl, baseline_data)
 
     daily_return = daily_pnl.sum(axis=1)
     total_return = total_pnl.sum(axis=1)
     long_exposure = long_position.sum(axis=1)
     short_exposure = short_position.sum(axis=1)
     zero_line = np.zeros(daily_pnl.index.size)
+
+    #print to logger
+    for x in stats.keys():
+    	logger.info('%s : %0.2f'%(x,stats[x])+'\n')
 
     ######################
     ## GUI mainloop
@@ -239,15 +237,10 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
     daily_plot = plt.subplot2grid((10,8), (5,0), colspan = 12, rowspan = 2, sharex = total_plot)
     position_plot = plt.subplot2grid((10,8), (8,0), colspan = 12, rowspan = 2, sharex = total_plot)
     ind = np.arange(len(daily_pnl.index))
-    
-    if case !=3:
-        daily_plot.set_title('Daily PnL')
-        total_plot.set_title('Total PnL')
-
-    if case == 3:      
-        daily_plot.set_title('Daily % PnL')
-        total_plot.set_title('Total % PnL')
-        total_plot.plot(ind, baseline_data['TOTAL_PNL'], 'g',linewidth=0.5, label='s&p500')
+          
+    daily_plot.set_title('Daily % PnL')
+    total_plot.set_title('Total % PnL')
+    total_plot.plot(ind, baseline_data['TOTAL_PNL'], 'g',linewidth=0.5, label='s&p500')
 
     daily_plot.plot(ind, zero_line, 'k')
     daily_plot.bar(ind, daily_return.values, 0.2, align='center', color='c', label='strategy')
@@ -267,9 +260,8 @@ def loadgui(case,daily_pnl, total_pnl, position, exchange, base_index, budget):
     plt.setp(daily_plot.get_xticklabels(), visible=False)
     plt.setp(total_plot.get_xticklabels(), visible=False)
     position_plot.xaxis.set_major_formatter(mtick.FuncFormatter(format_date))
-    if case ==3:
-        daily_plot.yaxis.set_major_formatter(mtick.FuncFormatter(format_perc))
-        total_plot.yaxis.set_major_formatter(mtick.FuncFormatter(format_perc))
+    daily_plot.yaxis.set_major_formatter(mtick.FuncFormatter(format_perc))
+    total_plot.yaxis.set_major_formatter(mtick.FuncFormatter(format_perc))
     daily_plot.set_ylabel('Daily Performance')
     total_plot.set_ylabel('Cumulative Performance')
     position_plot.set_ylabel('Long/Short')
