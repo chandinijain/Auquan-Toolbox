@@ -1,5 +1,7 @@
 Auquan(http://www.auquan.com) provides a backtesting toolbox to develop of your trading algorithms. The toolbox is free and open source which you can use to create and backtest strategies
 
+Data is in the folder historical Data. We provide daily data for 2740 stocks listed on NASDAQ and 2690 stocks listed on NYSE. The full list of stocks is available in a text file in the respective folders.
+
 The modules are in the folder pythonToolbox. We also provide a sample file to demonstrate how to use the toolbox.
 
 There are two functions in the sample file to modify: settings, and tradingstrategy.
