@@ -62,6 +62,12 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
         logger.exception("%s or %s is not valid date. Please check settings!"%(start, end))
         raise ValueError("%s or %s is not valid date. Please check settings!"%(start, end))
 
+    try:
+        assert(dates[1]>dates[0]),"Start Date is after End Date"
+    except AssertionError:
+        logger.exception("Start Date is after End Date")
+        raise
+
     #Download list of securities
     assert(download_security_list(exchange, logger))
     if len(markets)==0:
@@ -70,12 +76,12 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
         markets = [line.strip() for line in open(file_name)]
         # with open(file_name) as f:
         #     markets = f.read().splitlines()
+ 
 
     markets = [m.upper() for m in markets]
     features = ['OPEN', 'CLOSE', 'HIGH', 'LOW', 'VOLUME']
     date_range = pd.date_range(start=dates[0], end=dates[1], freq='B')
     back_data = {}
-    
     if random:
         for feature in features:
             back_data[feature] = pd.DataFrame(np.random.randint(10, 50, size=(date_range.size,len(markets))),
@@ -83,17 +89,35 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
                                               columns=markets)
     else:
         assert data_available(exchange, markets,logger)
+        market_to_drop = []
         for market in markets:
+            logger.info('Reading %s.csv'%market)
             csv = pd.read_csv('%s/historicalData/%s.csv'%(exchange.lower(), market.lower()), index_col=0)
             csv.index = pd.to_datetime(csv.index)
             csv.columns = [col.upper() for col in csv.columns]
             csv = csv.reindex(index=csv.index[::-1])
             features = [col.upper() for col in csv.columns]
             for feature in features:
-                if not(back_data.has_key(feature)):
-                    back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
+                null_dates = pd.Series(False, index=date_range)
+                try:
+                    if not(back_data.has_key(feature)):
+                        back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
+                except:
+                    if feature not in back_data:
+                        back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
                 back_data[feature][market] = csv[feature][date_range]
+                null_dates = pd.isnull(back_data[feature][market])
+                if null_dates[dates[0]-BDay(1)+BDay(1)]:
+                    if not market in market_to_drop:
+                        market_to_drop.append(market)
+                    
 
+        for m in market_to_drop: 
+            logger.info('Dropping %s. Not Enough Data'%m)
+            markets.remove(m) 
+
+        for feature in features:
+            back_data[feature].drop(market_to_drop, axis=1, inplace=True)
         dates_to_drop = pd.Series(False, index=date_range)
         for feature in features:
             dates_to_drop |= pd.isnull(back_data[feature]).any(axis=1)

@@ -62,7 +62,7 @@ def sortino_ratio(daily_return):
     if stdev == 0:
         return np.nan
     else:
-        return 100*annualized_return(daily_return)/stdev
+        return annualized_return(daily_return)/stdev
 
 def max_drawdown(daily_return):
     return np.max(np.maximum.accumulate(daily_return) - daily_return)

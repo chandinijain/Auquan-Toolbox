@@ -1,14 +1,15 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
 import pandas as pd
 import numpy as np
-from pythonToolbox import backtest
+from pythonToolbox.toolbox import backtest
 
 def settings():
-    exchange = "nasdaq"         # Exchange to download data for (nyse or nasdaq)
-    markets = []                # Stocks to download data for. 
-                                # Leave blank to download all stocks for the exchange (2700+ stocks)
-    date_start = '2016-11-01'   # Date to start the backtest
-    date_end = '2016-11-30'     # Date to end the backtest
-    lookback = 90               # Number of days you want historical data for
+    exchange = "nasdaq"           # Exchange to download data for (nyse or nasdaq)
+    markets = ['a','aapl','aeg','ain','air']                # Stocks to download data for. 
+                                # Leave blank to download all stocks for the exchange (~900 stocks)
+    date_start = '2009-11-01'   # Date to start the backtest
+    date_end = '2016-11-06'     # Date to end the backtest
+    lookback = 120               # Number of days you want historical data for
 
     """ To make a decision for day t, your algorithm will have historical data
     from t-lookback to t-1 days"""
@@ -45,22 +46,39 @@ def trading_strategy(lookback_data):
 
     ##YOUR CODE HERE
 
-    period1 = 90
-    period2 = 20
+    period1 = 120
+    period2 = 30
 
     markets_close = lookback_data['CLOSE']
     market_open = lookback_data['OPEN']
     avg_p1 = markets_close[-period1 : ].sum() / period1
     avg_p2 = markets_close[-period2 : ].sum() / period2
 
-    order['SIGNAL'][avg_p1-avg_p2>0] = 1
-    order['SIGNAL'][avg_p1-avg_p2<0] = -1
+    sdev_p1 = np.std(markets_close[-period1 : ], axis=0)
 
-    order['PRICE']=lookback_data['CLOSE'].iloc[-1]
+    difference = avg_p1 - avg_p2
+    deviation = difference.copy()
+    deviation[np.abs(difference)<sdev_p1] = 0
+    deviation[np.abs(difference)>sdev_p1] = np.sign(difference)*(np.abs(difference)-sdev_p1)
 
-    order['QUANTITY']=10
+    total_deviation = np.absolute(deviation).sum()
+    if total_deviation==0:
+        return order
+    else:  
+        portfolio_value_to_trade = 0.80*(lookback_data['VALUE'].iloc[-1])
+        desired_position = (portfolio_value_to_trade/total_deviation)*(deviation)/avg_p1
+        current_position = lookback_data['POSITION'].iloc[- 1]
 
-    return order
+        order['QUANTITY']= np.absolute(desired_position-current_position)
+        order['SIGNAL'] = np.sign(desired_position-current_position)
+        #order['PRICE']=avg_p1
+
+        # print("Dev:%s "%s,"Value:%s "%value,"Desired:")
+        # print(desired_position)
+        # print(position_curr)    
+        # print(order['QUANTITY'])
+        # print(order['SIGNAL'])
+        return order
 
 if __name__ == '__main__':
     [exchange, markets, date_start, date_end, lookback] = settings()
