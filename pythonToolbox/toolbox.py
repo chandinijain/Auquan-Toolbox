@@ -144,8 +144,7 @@ def execute_order(order, position, slippage, price, budget, margin, logger):
         logger.info('Cannot place order for markets with price unavailable! Order cancelled.')
         return position, budget, margin,0*position
     elif budget <=0:
-        logger.info('You do not have enough funds to trade! Order cancelled.')
-        return position, budget, margin,0*position
+        logger.info('You do not have enough funds to trade! Please sell some stock')
     else:
         (position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell) = execute_sell(order, position, slippage, price, budget,margin,logger)
         if budget_after_sell <= 0:
