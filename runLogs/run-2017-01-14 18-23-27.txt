@@ -1,0 +1,1434 @@
+Loading Data from 2009-11-01 to 2016-11-20....
+Reading A.csv
+Reading AAPL.csv
+Reading AB.csv
+Reading ABC.csv
+Reading ABM.csv
+Reading ABT.csv
+Reading ABX.csv
+Reading ADC.csv
+Reading ADM.csv
+Reading ADX.csv
+Reading AEE.csv
+Reading AEG.csv
+Reading AEM.csv
+Reading AEO.csv
+Reading AEP.csv
+Reading AES.csv
+Reading AET.csv
+Reading AF.csv
+Reading AFG.csv
+Reading AFL.csv
+Reading AGM.csv
+Reading AGU.csv
+Reading AIG.csv
+Reading AIN.csv
+Reading AIR.csv
+Reading AIT.csv
+Reading AIV.csv
+Reading AJG.csv
+Reading AKS.csv
+Reading ALB.csv
+Reading ALE.csv
+Reading ALK.csv
+Reading ALL.csv
+Reading ALV.csv
+Reading AME.csv
+Reading AMG.csv
+Reading AN.csv
+Reading ANF.csv
+Reading AOI.csv
+Reading AOS.csv
+Reading APA.csv
+Reading APC.csv
+Reading APD.csv
+Reading APU.csv
+Reading ARE.csv
+Reading ARNC.csv
+Reading AROC.csv
+Reading ASA.csv
+Reading ASB.csv
+Reading ASG.csv
+Reading ATI.csv
+Reading ATO.csv
+Reading ATR.csv
+Reading ATU.csv
+Reading ATW.csv
+Reading AU.csv
+Reading AVA.csv
+Reading AVB.csv
+Reading AVP.csv
+Reading AVT.csv
+Reading AVX.csv
+Reading AVY.csv
+Reading AWF.csv
+Reading AWR.csv
+Reading AXE.csv
+Reading AXL.csv
+Reading AXP.csv
+Reading AZN.csv
+Reading AZO.csv
+Reading B.csv
+Reading BA.csv
+Reading BAC.csv
+Reading BAM.csv
+Reading BAX.csv
+Reading BBT.csv
+Reading BBY.csv
+Reading BC.csv
+Reading BCE.csv
+Reading BCO.csv
+Reading BCR.csv
+Reading BCS.csv
+Reading BDN.csv
+Reading BDX.csv
+Reading BEN.csv
+Reading BF.B.csv
+Reading BFS.csv
+Reading BGC.csv
+Reading BGG.csv
+Reading BHE.csv
+Reading BHI.csv
+Reading BHP.csv
+Reading BID.csv
+Reading BIG.csv
+Reading BIO.csv
+Reading BK.csv
+Reading BKE.csv
+Reading BKH.csv
+Reading BKN.csv
+Reading BKS.csv
+Reading BKT.csv
+Reading BLK.csv
+Reading BLL.csv
+Reading BLX.csv
+Reading BMO.csv
+Reading BMS.csv
+Reading BMY.csv
+Reading BOH.csv
+Reading BP.csv
+Reading BPT.csv
+Reading BRC.csv
+Reading BRK.A.csv
+Reading BRK.B.csv
+Reading BRO.csv
+Reading BRS.csv
+Reading BSX.csv
+Reading BT.csv
+Reading BTO.csv
+Reading BWA.csv
+Reading BXP.csv
+Reading BXS.csv
+Reading BYD.csv
+Reading BZH.csv
+Reading C.csv
+Reading CAA.csv
+Reading CAE.csv
+Reading CAG.csv
+Reading CAH.csv
+Reading CAJ.csv
+Reading CAL.csv
+Reading CAT.csv
+Reading CB.csv
+Reading CBB.csv
+Reading CBD.csv
+Reading CBI.csv
+Reading CBK.csv
+Reading CBL.csv
+Reading CBM.csv
+Reading CBR.csv
+Reading CBT.csv
+Reading CBU.csv
+Reading CBZ.csv
+Reading CCC.csv
+Reading CCI.csv
+Reading CCJ.csv
+Reading CCK.csv
+Reading CDE.csv
+Reading CDI.csv
+Reading CFR.csv
+Reading CHD.csv
+Reading CHE.csv
+Reading CHH.csv
+Reading CHK.csv
+Reading CHL.csv
+Reading CHN.csv
+Reading CHS.csv
+Reading CI.csv
+Reading CIA.csv
+Reading CIEN.csv
+Reading CIF.csv
+Reading CKH.csv
+Reading CL.csv
+Reading CLB.csv
+Reading CLC.csv
+Reading CLF.csv
+Reading CLI.csv
+Reading CLS.csv
+Reading CLX.csv
+Reading CM.csv
+Reading CMA.csv
+Reading CMC.csv
+Reading CMI.csv
+Reading CMN.csv
+Reading CMO.csv
+Reading CMS.csv
+Reading CMU.csv
+Reading CNA.csv
+Reading CNI.csv
+Reading CNP.csv
+Reading CNQ.csv
+Reading CNX.csv
+Reading COF.csv
+Reading COG.csv
+Reading COH.csv
+Reading COO.csv
+Reading COP.csv
+Reading COT.csv
+Reading CPB.csv
+Reading CPE.csv
+Reading CPK.csv
+Reading CPT.csv
+Reading CR.csv
+Reading CRH.csv
+Reading CRK.csv
+Reading CRL.csv
+Reading CRR.csv
+Reading CRS.csv
+Reading CRT.csv
+Reading CRY.csv
+Reading CSC.csv
+Reading CSL.csv
+Reading CTB.csv
+Reading CTL.csv
+Reading CTR.csv
+Reading CTS.csv
+Reading CUB.csv
+Reading CUZ.csv
+Reading CVG.csv
+Reading CVO.csv
+Reading CVS.csv
+Reading CW.csv
+Reading CWT.csv
+Reading CX.csv
+Reading CXE.csv
+Reading CXW.csv
+Reading CYH.csv
+Reading D.csv
+Reading DBD.csv
+Reading DCI.csv
+Reading DD.csv
+Reading DDF.csv
+Reading DDR.csv
+Reading DDS.csv
+Reading DE.csv
+Reading DEL.csv
+Reading DEO.csv
+Reading DF.csv
+Reading DHF.csv
+Reading DIN.csv
+Reading DLX.csv
+Reading DNB.csv
+Reading DNR.csv
+Reading DOV.csv
+Reading DOW.csv
+Reading DRI.csv
+Reading DRQ.csv
+Reading DSM.csv
+Reading DST.csv
+Reading DSU.csv
+Reading DTE.csv
+Reading DUC.csv
+Reading DUK.csv
+Reading DV.csv
+Reading DVA.csv
+Reading DY.csv
+Reading EAT.csv
+Reading EBF.csv
+Reading ECL.csv
+Reading ED.csv
+Reading EDE.csv
+Reading EFX.csv
+Reading ELP.csv
+Reading ELS.csv
+Reading ELY.csv
+Reading EME.csv
+Reading EMF.csv
+Reading EMN.csv
+Reading EMR.csv
+Reading ENIA.csv
+Reading ENZ.csv
+Reading EOCC.csv
+Reading EPD.csv
+Reading EPR.csv
+Reading EQR.csv
+Reading EQT.csv
+Reading EQY.csv
+Reading ERJ.csv
+Reading ES.csv
+Reading ESE.csv
+Reading ESL.csv
+Reading ESS.csv
+Reading ESV.csv
+Reading ETN.csv
+Reading ETP.csv
+Reading EVC.csv
+Reading EVF.csv
+Reading EVN.csv
+Reading EW.csv
+Reading EXAR.csv
+Reading EXP.csv
+Reading FAF.csv
+Reading FBC.csv
+Reading FBP.csv
+Reading FBR.csv
+Reading FCF.csv
+Reading FCFS.csv
+Reading FCN.csv
+Reading FCX.csv
+Reading FDP.csv
+Reading FDX.csv
+Reading FE.csv
+Reading FGP.csv
+Reading FHN.csv
+Reading FIF.csv
+Reading FII.csv
+Reading FIX.csv
+Reading FL.csv
+Reading FLR.csv
+Reading FLS.csv
+Reading FMC.csv
+Reading FMS.csv
+Reading FMX.csv
+Reading FNB.csv
+Reading FOE.csv
+Reading FR.csv
+Reading FRT.csv
+Reading FSS.csv
+Reading FT.csv
+Reading FUL.csv
+Reading FUN.csv
+Reading GAB.csv
+Reading GAM.csv
+Reading GATX.csv
+Reading GBL.csv
+Reading GCO.csv
+Reading GD.csv
+Reading GE.csv
+Reading GEF.csv
+Reading GEO.csv
+Reading GES.csv
+Reading GF.csv
+Reading GFF.csv
+Reading GG.csv
+Reading GGG.csv
+Reading GGT.csv
+Reading GHC.csv
+Reading GIB.csv
+Reading GIL.csv
+Reading GIM.csv
+Reading GIS.csv
+Reading GLT.csv
+Reading GLW.csv
+Reading GPC.csv
+Reading GPI.csv
+Reading GPK.csv
+Reading GPN.csv
+Reading GPS.csv
+Reading GRA.csv
+Reading GS.csv
+Reading GSK.csv
+Reading GUT.csv
+Reading GVA.csv
+Reading GWW.csv
+Reading GXP.csv
+Reading HAE.csv
+Reading HAL.csv
+Reading HAR.csv
+Reading HCN.csv
+Reading HCP.csv
+Reading HD.csv
+Reading HE.csv
+Reading HEI.A.csv
+Reading HEI.csv
+Reading HES.csv
+Reading HGT.csv
+Reading HHS.csv
+Reading HIG.csv
+Reading HIO.csv
+Reading HIW.csv
+Reading HIX.csv
+Reading HL.csv
+Reading HLX.csv
+Reading HMC.csv
+Reading HMN.csv
+Reading HMY.csv
+Reading HNI.csv
+Reading HOG.csv
+Reading HON.csv
+Reading HOV.csv
+Reading HP.csv
+Reading HPQ.csv
+Reading HQH.csv
+Reading HQL.csv
+Reading HR.csv
+Reading HRB.csv
+Reading HRC.csv
+Reading HRL.csv
+Reading HRS.csv
+Reading HSBC.csv
+Reading HSC.csv
+Reading HST.csv
+Reading HSY.csv
+Reading HTR.csv
+Reading HUBB.csv
+Reading HUM.csv
+Reading HVT.csv
+Reading HW.csv
+Reading HXL.csv
+Reading HYB.csv
+Reading HYI.csv
+Reading IBM.csv
+Reading ICB.csv
+Reading IDA.csv
+Reading IEX.csv
+Reading IFF.csv
+Reading IFN.csv
+Reading IIF.csv
+Reading IM.csv
+Reading IMN.csv
+Reading ING.csv
+Reading INT.csv
+Reading INX.csv
+Reading IO.csv
+Reading IP.csv
+Reading IPG.csv
+Reading IR.csv
+Reading IRM.csv
+Reading IT.csv
+Reading ITW.csv
+Reading IVZ.csv
+Reading JBL.csv
+Reading JCP.csv
+Reading JEC.csv
+Reading JEQ.csv
+Reading JHS.csv
+Reading JLL.csv
+Reading JNJ.csv
+Reading JNPR.csv
+Reading JNS.csv
+Reading JOE.csv
+Reading JOF.csv
+Reading JPM.csv
+Reading JW.A.csv
+Reading JWN.csv
+Reading K.csv
+Reading KBH.csv
+Reading KEM.csv
+Reading KEP.csv
+Reading KEX.csv
+Reading KEY.csv
+Reading KFY.csv
+Reading KGC.csv
+Reading KIM.csv
+Reading KMB.csv
+Reading KMM.csv
+Reading KMT.csv
+Reading KMX.csv
+Reading KNX.csv
+Reading KO.csv
+Reading KOF.csv
+Reading KR.csv
+Reading KRC.csv
+Reading KSM.csv
+Reading KSS.csv
+Reading KSU.csv
+Reading KTF.csv
+Reading KWR.csv
+Reading KYO.csv
+Reading L.csv
+Reading LAD.csv
+Reading LB.csv
+Reading LDL.csv
+Reading LDR.csv
+Reading LEE.csv
+Reading LEG.csv
+Reading LEN.csv
+Reading LEO.csv
+Reading LGF.csv
+Reading LH.csv
+Reading LHO.csv
+Reading LII.csv
+Reading LLL.csv
+Reading LLY.csv
+Reading LM.csv
+Reading LNC.csv
+Reading LNN.csv
+Reading LNT.csv
+Reading LOW.csv
+Reading LPT.csv
+Reading LPX.csv
+Reading LTC.csv
+Reading LUB.csv
+Reading LUK.csv
+Reading LUV.csv
+Reading LUX.csv
+Reading LXK.csv
+Reading LXP.csv
+Reading LZB.csv
+Reading M.csv
+Reading MAA.csv
+Reading MAC.csv
+Reading MAN.csv
+Reading MAS.csv
+Reading MBI.csv
+Reading MBT.csv
+Reading MCA.csv
+Reading MCD.csv
+Reading MCK.csv
+Reading MCO.csv
+Reading MCR.csv
+Reading MCS.csv
+Reading MCY.csv
+Reading MDC.csv
+Reading MDP.csv
+Reading MDR.csv
+Reading MDT.csv
+Reading MDU.csv
+Reading MEG.csv
+Reading MEI.csv
+Reading MEN.csv
+Reading MET.csv
+Reading MFA.csv
+Reading MFC.csv
+Reading MFCB.csv
+Reading MFL.csv
+Reading MFM.csv
+Reading MGA.csv
+Reading MGF.csv
+Reading MGM.csv
+Reading MHF.csv
+Reading MHK.csv
+Reading MHN.csv
+Reading MHO.csv
+Reading MIN.csv
+Reading MIY.csv
+Reading MKC.csv
+Reading MKL.csv
+Reading MLI.csv
+Reading MLM.csv
+Reading MMC.csv
+Reading MMM.csv
+Reading MMP.csv
+Reading MMS.csv
+Reading MMT.csv
+Reading MMU.csv
+Reading MO.csv
+Reading MOD.csv
+Reading MOG.A.csv
+Reading MON.csv
+Reading MPA.csv
+Reading MQT.csv
+Reading MQY.csv
+Reading MRK.csv
+Reading MS.csv
+Reading MSD.csv
+Reading MSF.csv
+Reading MSI.csv
+Reading MSM.csv
+Reading MT.csv
+Reading MTB.csv
+Reading MTD.csv
+Reading MTG.csv
+Reading MTH.csv
+Reading MTN.csv
+Reading MTOR.csv
+Reading MTU.csv
+Reading MTW.csv
+Reading MTX.csv
+Reading MTZ.csv
+Reading MUA.csv
+Reading MUC.csv
+Reading MUE.csv
+Reading MUH.csv
+Reading MUJ.csv
+Reading MUR.csv
+Reading MVC.csv
+Reading MVT.csv
+Reading MXF.csv
+Reading MYC.csv
+Reading MYD.csv
+Reading MYE.csv
+Reading MYF.csv
+Reading MYI.csv
+Reading MYJ.csv
+Reading MYN.csv
+Reading NAD.csv
+Reading NAT.csv
+Reading NBR.csv
+Reading NC.csv
+Reading NCA.csv
+Reading NCI.csv
+Reading NCR.csv
+Reading NCS.csv
+Reading NEM.csv
+Reading NEU.csv
+Reading NFG.csv
+Reading NFX.csv
+Reading NHI.csv
+Reading NI.csv
+Reading NJR.csv
+Reading NKE.csv
+Reading NL.csv
+Reading NLS.csv
+Reading NLY.csv
+Reading NNN.csv
+Reading NOC.csv
+Reading NOK.csv
+Reading NOV.csv
+Reading NPK.csv
+Reading NRT.csv
+Reading NSC.csv
+Reading NSL.csv
+Reading NTT.csv
+Reading NUE.csv
+Reading NUV.csv
+Reading NVO.csv
+Reading NVR.csv
+Reading NVS.csv
+Reading NWN.csv
+Reading NXP.csv
+Reading NXQ.csv
+Reading NXR.csv
+Reading NYT.csv
+Reading O.csv
+Reading OA.csv
+Reading OCN.csv
+Reading OFC.csv
+Reading OFG.csv
+Reading OGE.csv
+Reading OHI.csv
+Reading OI.csv
+Reading OII.csv
+Reading OIS.csv
+Reading OKE.csv
+Reading OKS.csv
+Reading OLN.csv
+Reading OMC.csv
+Reading OMI.csv
+Reading OMN.csv
+Reading ORAN.csv
+Reading ORCL.csv
+Reading ORI.csv
+Reading OSK.csv
+Reading OXM.csv
+Reading OXY.csv
+Reading PAA.csv
+Reading PAG.csv
+Reading PBI.csv
+Reading PBR.A.csv
+Reading PBR.csv
+Reading PBT.csv
+Reading PCF.csv
+Reading PCG.csv
+Reading PEG.csv
+Reading PEI.csv
+Reading PEO.csv
+Reading PEP.csv
+Reading PFE.csv
+Reading PG.csv
+Reading PGR.csv
+Reading PHG.csv
+Reading PHI.csv
+Reading PHM.csv
+Reading PII.csv
+Reading PIM.csv
+Reading PIR.csv
+Reading PKD.csv
+Reading PKE.csv
+Reading PKG.csv
+Reading PKI.csv
+Reading PKX.csv
+Reading PLD.csv
+Reading PLT.csv
+Reading PMM.csv
+Reading PMO.csv
+Reading PNC.csv
+Reading PNM.csv
+Reading PNW.csv
+Reading POL.csv
+Reading POT.csv
+Reading PPG.csv
+Reading PPL.csv
+Reading PPR.csv
+Reading PPS.csv
+Reading PPT.csv
+Reading PQ.csv
+Reading PRA.csv
+Reading PSA.csv
+Reading PSO.csv
+Reading PUK.csv
+Reading PVH.csv
+Reading PWR.csv
+Reading PX.csv
+Reading PXD.csv
+Reading PZE.csv
+Reading QTM.csv
+Reading R.csv
+Reading RAD.csv
+Reading RAI.csv
+Reading RAS.csv
+Reading RBC.csv
+Reading RCL.csv
+Reading RCS.csv
+Reading RDN.csv
+Reading RE.csv
+Reading REG.csv
+Reading RELX.csv
+Reading RES.csv
+Reading REV.csv
+Reading RF.csv
+Reading RGR.csv
+Reading RGS.csv
+Reading RHI.csv
+Reading RHT.csv
+Reading RIG.csv
+Reading RIO.csv
+Reading RJF.csv
+Reading RL.csv
+Reading RLI.csv
+Reading RMD.csv
+Reading RMT.csv
+Reading RNR.csv
+Reading ROG.csv
+Reading ROK.csv
+Reading ROL.csv
+Reading ROP.csv
+Reading RPM.csv
+Reading RPT.csv
+Reading RRC.csv
+Reading RS.csv
+Reading RSG.csv
+Reading RT.csv
+Reading RTEC.csv
+Reading RTN.csv
+Reading RVT.csv
+Reading RWT.csv
+Reading RY.csv
+Reading RYN.csv
+Reading SAH.csv
+Reading SAM.csv
+Reading SAN.csv
+Reading SAP.csv
+Reading SBR.csv
+Reading SBW.csv
+Reading SCG.csv
+Reading SCI.csv
+Reading SCS.csv
+Reading SEE.csv
+Reading SFE.csv
+Reading SGU.csv
+Reading SGY.csv
+Reading SHW.csv
+Reading SIX.csv
+Reading SJI.csv
+Reading SJM.csv
+Reading SJR.csv
+Reading SJT.csv
+Reading SKM.csv
+Reading SKT.csv
+Reading SKX.csv
+Reading SLB.csv
+Reading SLF.csv
+Reading SLG.csv
+Reading SM.csv
+Reading SMG.csv
+Reading SNA.csv
+Reading SNE.csv
+Reading SO.csv
+Reading SON.csv
+Reading SOR.csv
+Reading SPG.csv
+Reading SPGI.csv
+Reading SPH.csv
+Reading SPN.csv
+Reading SPXC.csv
+Reading SR.csv
+Reading SRE.csv
+Reading SRI.csv
+Reading SSD.csv
+Reading SSL.csv
+Reading SSP.csv
+Reading STC.csv
+Reading STI.csv
+Reading STJ.csv
+Reading STM.csv
+Reading STT.csv
+Reading STZ.csv
+Reading SU.csv
+Reading SUI.csv
+Reading SUP.csv
+Reading SVU.csv
+Reading SWC.csv
+Reading SWK.csv
+Reading SWM.csv
+Reading SWN.csv
+Reading SWX.csv
+Reading SWZ.csv
+Reading SXI.csv
+Reading SXT.csv
+Reading SYK.csv
+Reading SYT.csv
+Reading SYY.csv
+Reading T.csv
+Reading TAP.csv
+Reading TBI.csv
+Reading TCB.csv
+Reading TCO.csv
+Reading TD.csv
+Reading TDF.csv
+Reading TDW.csv
+Reading TDY.csv
+Reading TEF.csv
+Reading TEI.csv
+Reading TEN.csv
+Reading TEO.csv
+Reading TER.csv
+Reading TEVA.csv
+Reading TEX.csv
+Reading TFX.csv
+Reading TG.csv
+Reading TGI.csv
+Reading TGNA.csv
+Reading TGT.csv
+Reading THC.csv
+Reading THG.csv
+Reading THO.csv
+Reading TIF.csv
+Reading TJX.csv
+Reading TK.csv
+Reading TKR.csv
+Reading TLI.csv
+Reading TLK.csv
+Reading TM.csv
+Reading TMK.csv
+Reading TMO.csv
+Reading TNC.csv
+Reading TOL.csv
+Reading TOT.csv
+Reading TR.csv
+Reading TRK.csv
+Reading TRN.csv
+Reading TRP.csv
+Reading TRV.csv
+Reading TSI.csv
+Reading TSM.csv
+Reading TSN.csv
+Reading TSO.csv
+Reading TSS.csv
+Reading TTC.csv
+Reading TTI.csv
+Reading TUP.csv
+Reading TV.csv
+Reading TVC.csv
+Reading TWI.csv
+Reading TXT.csv
+Reading TY.csv
+Reading TYL.csv
+Reading UDR.csv
+Reading UFI.csv
+Reading UGI.csv
+Reading UHS.csv
+Reading UHT.csv
+Reading UIS.csv
+Reading UL.csv
+Reading UMC.csv
+Reading UN.csv
+Reading UNH.csv
+Reading UNP.csv
+Reading UNT.csv
+Reading UPS.csv
+Reading URI.csv
+Reading USA.csv
+Reading USB.csv
+Reading USG.csv
+Reading USM.csv
+Reading UTX.csv
+Reading UVV.csv
+Reading VAL.csv
+Reading VAR.csv
+Reading VBF.csv
+Reading VFC.csv
+Reading VGM.csv
+Reading VGR.csv
+Reading VIV.csv
+Reading VKQ.csv
+Reading VLO.csv
+Reading VLY.csv
+Reading VMC.csv
+Reading VMI.csv
+Reading VNO.csv
+Reading VRX.csv
+Reading VSH.csv
+Reading VTR.csv
+Reading VVC.csv
+Reading VVI.csv
+Reading VVR.csv
+Reading VZ.csv
+Reading WAB.csv
+Reading WAT.csv
+Reading WBS.csv
+Reading WCC.csv
+Reading WDR.csv
+Reading WEC.csv
+Reading WFC.csv
+Reading WG.csv
+Reading WGL.csv
+Reading WGO.csv
+Reading WHR.csv
+Reading WIT.csv
+Reading WMB.csv
+Reading WMK.csv
+Reading WMT.csv
+Reading WNC.csv
+Reading WOR.csv
+Reading WR.csv
+Reading WRB.csv
+Reading WRE.csv
+Reading WRI.csv
+Reading WSM.csv
+Reading WSO.csv
+Reading WST.csv
+Reading WTM.csv
+Reading WTS.csv
+Reading WWE.csv
+Reading WWW.csv
+Reading WY.csv
+Reading X.csv
+Reading XEL.csv
+Reading XOM.csv
+Reading XRX.csv
+Reading YUM.csv
+Reading ZF.csv
+Dropping ETN. Not Enough Data
+Dropping KEM. Not Enough Data
+Dropping SIX. Not Enough Data
+Initial funds: 1000000.00
+------------------------------------
+Evaluating...
+Trading date :27 Nov 2012
+Trading date :28 Nov 2012
+Trading date :29 Nov 2012
+Trading date :30 Nov 2012
+Trading date :03 Dec 2012
+Trading date :04 Dec 2012
+Trading date :05 Dec 2012
+Trading date :06 Dec 2012
+Trading date :07 Dec 2012
+Trading date :17 Dec 2012
+Trading date :18 Dec 2012
+Trading date :19 Dec 2012
+Trading date :20 Dec 2012
+Trading date :21 Dec 2012
+Trading date :24 Dec 2012
+Trading date :26 Dec 2012
+Trading date :27 Dec 2012
+Trading date :28 Dec 2012
+Trading date :31 Dec 2012
+Trading date :02 Jan 2013
+Trading date :03 Jan 2013
+Trading date :04 Jan 2013
+Trading date :07 Jan 2013
+Trading date :08 Jan 2013
+Trading date :09 Jan 2013
+Trading date :10 Jan 2013
+Trading date :11 Jan 2013
+Trading date :14 Jan 2013
+Trading date :15 Jan 2013
+Trading date :16 Jan 2013
+Trading date :17 Jan 2013
+Trading date :18 Jan 2013
+Trading date :22 Jan 2013
+Trading date :23 Jan 2013
+Trading date :24 Jan 2013
+Trading date :25 Jan 2013
+Trading date :28 Jan 2013
+Trading date :29 Jan 2013
+Trading date :30 Jan 2013
+Trading date :31 Jan 2013
+Trading date :01 Feb 2013
+Trading date :04 Feb 2013
+Trading date :05 Feb 2013
+Trading date :06 Feb 2013
+Trading date :07 Feb 2013
+Trading date :08 Feb 2013
+Trading date :11 Feb 2013
+Trading date :12 Feb 2013
+Trading date :13 Feb 2013
+Trading date :14 Feb 2013
+Trading date :15 Feb 2013
+Trading date :19 Feb 2013
+Trading date :20 Feb 2013
+Trading date :21 Feb 2013
+Trading date :22 Feb 2013
+Trading date :25 Feb 2013
+Trading date :26 Feb 2013
+Trading date :27 Feb 2013
+Trading date :28 Feb 2013
+Trading date :01 Mar 2013
+Trading date :04 Mar 2013
+Trading date :05 Mar 2013
+Trading date :06 Mar 2013
+Trading date :07 Mar 2013
+Trading date :08 Mar 2013
+Trading date :11 Mar 2013
+Trading date :12 Mar 2013
+Trading date :13 Mar 2013
+Trading date :14 Mar 2013
+Trading date :15 Mar 2013
+Trading date :18 Mar 2013
+Trading date :19 Mar 2013
+Trading date :20 Mar 2013
+Trading date :21 Mar 2013
+Trading date :22 Mar 2013
+Trading date :25 Mar 2013
+Trading date :26 Mar 2013
+Trading date :27 Mar 2013
+Trading date :28 Mar 2013
+Trading date :01 Apr 2013
+Trading date :02 Apr 2013
+Trading date :03 Apr 2013
+Trading date :04 Apr 2013
+Trading date :05 Apr 2013
+Trading date :08 Apr 2013
+Trading date :09 Apr 2013
+Trading date :10 Apr 2013
+Trading date :11 Apr 2013
+Trading date :12 Apr 2013
+Trading date :15 Apr 2013
+Trading date :16 Apr 2013
+Trading date :17 Apr 2013
+Trading date :18 Apr 2013
+Trading date :19 Apr 2013
+Trading date :22 Apr 2013
+Trading date :23 Apr 2013
+Trading date :24 Apr 2013
+Trading date :25 Apr 2013
+Trading date :26 Apr 2013
+Trading date :29 Apr 2013
+Trading date :30 Apr 2013
+Trading date :01 May 2013
+Trading date :02 May 2013
+Trading date :03 May 2013
+Trading date :06 May 2013
+Trading date :07 May 2013
+Trading date :08 May 2013
+Trading date :09 May 2013
+Trading date :10 May 2013
+Trading date :13 May 2013
+Trading date :14 May 2013
+Trading date :15 May 2013
+Trading date :16 May 2013
+Trading date :17 May 2013
+Trading date :20 May 2013
+Trading date :21 May 2013
+Trading date :22 May 2013
+Trading date :23 May 2013
+Trading date :24 May 2013
+Trading date :28 May 2013
+Trading date :29 May 2013
+Trading date :30 May 2013
+Trading date :31 May 2013
+Trading date :03 Jun 2013
+Trading date :04 Jun 2013
+Trading date :05 Jun 2013
+Trading date :06 Jun 2013
+Trading date :07 Jun 2013
+Trading date :10 Jun 2013
+Trading date :11 Jun 2013
+Trading date :12 Jun 2013
+Trading date :13 Jun 2013
+Trading date :14 Jun 2013
+Trading date :17 Jun 2013
+Trading date :18 Jun 2013
+Trading date :19 Jun 2013
+Trading date :20 Jun 2013
+Trading date :21 Jun 2013
+Trading date :24 Jun 2013
+Trading date :25 Jun 2013
+Trading date :26 Jun 2013
+Trading date :27 Jun 2013
+Trading date :28 Jun 2013
+Trading date :01 Jul 2013
+Trading date :02 Jul 2013
+Trading date :03 Jul 2013
+Trading date :05 Jul 2013
+Trading date :08 Jul 2013
+Trading date :09 Jul 2013
+Trading date :10 Jul 2013
+Trading date :11 Jul 2013
+Trading date :12 Jul 2013
+Trading date :15 Jul 2013
+Trading date :16 Jul 2013
+Trading date :17 Jul 2013
+Trading date :18 Jul 2013
+Trading date :19 Jul 2013
+Trading date :22 Jul 2013
+Trading date :23 Jul 2013
+Trading date :24 Jul 2013
+Trading date :25 Jul 2013
+Trading date :26 Jul 2013
+Trading date :29 Jul 2013
+Trading date :30 Jul 2013
+Trading date :31 Jul 2013
+Trading date :01 Aug 2013
+Trading date :02 Aug 2013
+Trading date :05 Aug 2013
+Trading date :06 Aug 2013
+Trading date :07 Aug 2013
+Trading date :08 Aug 2013
+Trading date :09 Aug 2013
+Trading date :12 Aug 2013
+Trading date :13 Aug 2013
+Trading date :14 Aug 2013
+Trading date :15 Aug 2013
+Trading date :16 Aug 2013
+Trading date :19 Aug 2013
+Trading date :20 Aug 2013
+Trading date :21 Aug 2013
+Trading date :22 Aug 2013
+Trading date :23 Aug 2013
+Trading date :26 Aug 2013
+Trading date :27 Aug 2013
+Trading date :28 Aug 2013
+Trading date :29 Aug 2013
+Trading date :30 Aug 2013
+Trading date :03 Sep 2013
+Trading date :04 Sep 2013
+Trading date :05 Sep 2013
+Trading date :06 Sep 2013
+Trading date :09 Sep 2013
+Trading date :20 Sep 2013
+Trading date :23 Sep 2013
+Trading date :24 Sep 2013
+Trading date :25 Sep 2013
+Trading date :26 Sep 2013
+Trading date :27 Sep 2013
+Trading date :30 Sep 2013
+Trading date :01 Oct 2013
+Trading date :02 Oct 2013
+Trading date :03 Oct 2013
+Trading date :04 Oct 2013
+Trading date :07 Oct 2013
+Trading date :08 Oct 2013
+Trading date :09 Oct 2013
+Trading date :10 Oct 2013
+Trading date :11 Oct 2013
+Trading date :14 Oct 2013
+Trading date :15 Oct 2013
+Trading date :16 Oct 2013
+Trading date :17 Oct 2013
+Trading date :18 Oct 2013
+Trading date :21 Oct 2013
+Trading date :22 Oct 2013
+Trading date :23 Oct 2013
+Trading date :24 Oct 2013
+Trading date :25 Oct 2013
+Trading date :28 Oct 2013
+Trading date :29 Oct 2013
+Trading date :30 Oct 2013
+Trading date :31 Oct 2013
+Trading date :01 Nov 2013
+Trading date :04 Nov 2013
+Trading date :05 Nov 2013
+Trading date :06 Nov 2013
+Trading date :07 Nov 2013
+Trading date :08 Nov 2013
+Trading date :11 Nov 2013
+Trading date :12 Nov 2013
+Trading date :13 Nov 2013
+Trading date :14 Nov 2013
+Trading date :15 Nov 2013
+Trading date :18 Nov 2013
+Trading date :19 Nov 2013
+Trading date :20 Nov 2013
+Trading date :21 Nov 2013
+Trading date :22 Nov 2013
+Trading date :25 Nov 2013
+Trading date :26 Nov 2013
+Trading date :27 Nov 2013
+Trading date :29 Nov 2013
+Trading date :02 Dec 2013
+Trading date :03 Dec 2013
+Trading date :04 Dec 2013
+Trading date :05 Dec 2013
+Trading date :06 Dec 2013
+Trading date :09 Dec 2013
+Trading date :10 Dec 2013
+Trading date :11 Dec 2013
+Trading date :12 Dec 2013
+Trading date :13 Dec 2013
+Trading date :16 Dec 2013
+Trading date :17 Dec 2013
+Trading date :18 Dec 2013
+Trading date :19 Dec 2013
+Trading date :20 Dec 2013
+Trading date :23 Dec 2013
+Trading date :24 Dec 2013
+Trading date :26 Dec 2013
+Trading date :27 Dec 2013
+Trading date :30 Dec 2013
+Trading date :31 Dec 2013
+Trading date :02 Jan 2014
+Trading date :03 Jan 2014
+Trading date :06 Jan 2014
+Trading date :07 Jan 2014
+Trading date :08 Jan 2014
+Trading date :09 Jan 2014
+Trading date :10 Jan 2014
+Trading date :13 Jan 2014
+Trading date :14 Jan 2014
+Trading date :15 Jan 2014
+Trading date :16 Jan 2014
+Trading date :17 Jan 2014
+Trading date :21 Jan 2014
+Trading date :22 Jan 2014
+Trading date :23 Jan 2014
+Trading date :24 Jan 2014
+Trading date :27 Jan 2014
+Trading date :28 Jan 2014
+Trading date :29 Jan 2014
+Trading date :30 Jan 2014
+Trading date :31 Jan 2014
+Trading date :03 Feb 2014
+Trading date :04 Feb 2014
+Trading date :05 Feb 2014
+Trading date :06 Feb 2014
+Trading date :07 Feb 2014
+Trading date :10 Feb 2014
+Trading date :11 Feb 2014
+Trading date :12 Feb 2014
+Trading date :13 Feb 2014
+Trading date :14 Feb 2014
+Trading date :18 Feb 2014
+Trading date :19 Feb 2014
+Trading date :20 Feb 2014
+Trading date :21 Feb 2014
+Trading date :24 Feb 2014
+Trading date :25 Feb 2014
+Trading date :26 Feb 2014
+Trading date :27 Feb 2014
+Trading date :28 Feb 2014
+Trading date :03 Mar 2014
+Trading date :04 Mar 2014
+Trading date :05 Mar 2014
+Trading date :06 Mar 2014
+Trading date :07 Mar 2014
+Trading date :10 Mar 2014
+Trading date :11 Mar 2014
+Trading date :12 Mar 2014
+Trading date :13 Mar 2014
+Trading date :14 Mar 2014
+Trading date :17 Mar 2014
+Trading date :18 Mar 2014
+Trading date :19 Mar 2014
+Trading date :20 Mar 2014
+Trading date :21 Mar 2014
+Trading date :24 Mar 2014
+Trading date :25 Mar 2014
+Trading date :26 Mar 2014
+Trading date :27 Mar 2014
+Trading date :28 Mar 2014
+Trading date :31 Mar 2014
+Trading date :01 Apr 2014
+Trading date :02 Apr 2014
+Trading date :03 Apr 2014
+Trading date :04 Apr 2014
+Trading date :07 Apr 2014
+Trading date :08 Apr 2014
+Trading date :09 Apr 2014
+Trading date :10 Apr 2014
+Trading date :11 Apr 2014
+Trading date :14 Apr 2014
+Trading date :15 Apr 2014
+Trading date :16 Apr 2014
+Trading date :17 Apr 2014
+Trading date :21 Apr 2014
+Trading date :22 Apr 2014
+Trading date :23 Apr 2014
+Trading date :24 Apr 2014
+Trading date :25 Apr 2014
+Trading date :28 Apr 2014
+Trading date :29 Apr 2014
+Trading date :30 Apr 2014
+Trading date :01 May 2014
+Trading date :02 May 2014
+Trading date :05 May 2014
+Trading date :06 May 2014
+Trading date :07 May 2014
+Trading date :08 May 2014
+Trading date :09 May 2014
+Trading date :12 May 2014
+Trading date :13 May 2014
+Trading date :14 May 2014
+Trading date :15 May 2014
+Trading date :16 May 2014
+Trading date :19 May 2014
+Trading date :20 May 2014
+Trading date :21 May 2014
+Trading date :22 May 2014
+Trading date :23 May 2014
+Trading date :27 May 2014
+Trading date :28 May 2014
+Trading date :29 May 2014
+Trading date :30 May 2014
+Trading date :02 Jun 2014
+Trading date :03 Jun 2014
+Trading date :04 Jun 2014
+Trading date :05 Jun 2014
+Trading date :06 Jun 2014
+Trading date :09 Jun 2014
+Trading date :10 Jun 2014
+Trading date :11 Jun 2014
+Trading date :12 Jun 2014
+Trading date :13 Jun 2014
+Trading date :16 Jun 2014
+Trading date :17 Jun 2014
+Trading date :18 Jun 2014
+Trading date :19 Jun 2014
+Trading date :20 Jun 2014
+Trading date :23 Jun 2014
+Trading date :24 Jun 2014
+Trading date :25 Jun 2014
+Trading date :26 Jun 2014
+Trading date :27 Jun 2014
+Trading date :30 Jun 2014
+Trading date :01 Jul 2014
+Trading date :02 Jul 2014
+Trading date :03 Jul 2014
+Trading date :07 Jul 2014
+Trading date :08 Jul 2014
+Trading date :09 Jul 2014
+Trading date :10 Jul 2014
+Trading date :11 Jul 2014
+Trading date :14 Jul 2014
+Trading date :15 Jul 2014
+Trading date :16 Jul 2014
+Trading date :17 Jul 2014
+Trading date :18 Jul 2014
+Trading date :21 Jul 2014
+Trading date :22 Jul 2014
+Trading date :23 Jul 2014
+Trading date :24 Jul 2014
+Trading date :25 Jul 2014
+Trading date :28 Jul 2014
+Trading date :29 Jul 2014
+Trading date :30 Jul 2014
+Trading date :31 Jul 2014
+Trading date :01 Aug 2014
+Trading date :04 Aug 2014
+Trading date :05 Aug 2014
+Trading date :06 Aug 2014
+Trading date :07 Aug 2014
+Trading date :08 Aug 2014
+Trading date :11 Aug 2014
+Trading date :12 Aug 2014
+Trading date :13 Aug 2014
+Trading date :14 Aug 2014
+Trading date :15 Aug 2014
+Trading date :18 Aug 2014
+Trading date :19 Aug 2014
+Trading date :20 Aug 2014
+Trading date :21 Aug 2014
+Trading date :22 Aug 2014
+Trading date :25 Aug 2014
+Trading date :26 Aug 2014
+Trading date :27 Aug 2014
+Trading date :28 Aug 2014
+Trading date :29 Aug 2014
+Trading date :02 Sep 2014
+Trading date :03 Sep 2014
+Trading date :04 Sep 2014
+Trading date :05 Sep 2014
+Trading date :08 Sep 2014
+Trading date :09 Sep 2014
+Trading date :10 Sep 2014
+Trading date :11 Sep 2014
+Trading date :12 Sep 2014
+Trading date :15 Sep 2014
+Trading date :16 Sep 2014
+Trading date :17 Sep 2014
+Trading date :18 Sep 2014
+Trading date :19 Sep 2014
+Trading date :22 Sep 2014
+Trading date :23 Sep 2014
+Trading date :24 Sep 2014
+Trading date :25 Sep 2014
+Trading date :26 Sep 2014
+Trading date :29 Sep 2014
+Trading date :30 Sep 2014
+Trading date :01 Oct 2014
+Trading date :02 Oct 2014
+Trading date :03 Oct 2014
+Trading date :06 Oct 2014
+Trading date :07 Oct 2014
+Trading date :08 Oct 2014
+Trading date :09 Oct 2014
+Trading date :10 Oct 2014
+Trading date :13 Oct 2014
+Trading date :14 Oct 2014
+Trading date :15 Oct 2014
+Trading date :16 Oct 2014
+Trading date :17 Oct 2014
+Trading date :20 Oct 2014
+Trading date :21 Oct 2014
+Trading date :22 Oct 2014
+Trading date :23 Oct 2014
+Trading date :24 Oct 2014
+Trading date :27 Oct 2014
+Trading date :28 Oct 2014
+Trading date :29 Oct 2014
+Trading date :30 Oct 2014
+Trading date :31 Oct 2014
+Trading date :03 Nov 2014
+Trading date :04 Nov 2014
+Trading date :05 Nov 2014
+Trading date :06 Nov 2014
+Trading date :07 Nov 2014
+Trading date :10 Nov 2014
+Trading date :11 Nov 2014
+Trading date :12 Nov 2014
+Trading date :13 Nov 2014
+Trading date :14 Nov 2014
+Trading date :17 Nov 2014
+Trading date :18 Nov 2014
+Trading date :19 Nov 2014
+Trading date :20 Nov 2014
+Trading date :21 Nov 2014
+Trading date :24 Nov 2014
+Trading date :25 Nov 2014
+Trading date :26 Nov 2014
+Trading date :28 Nov 2014
+Trading date :01 Dec 2014
+Trading date :02 Dec 2014
+Trading date :03 Dec 2014
+Trading date :04 Dec 2014
+Trading date :05 Dec 2014
+Trading date :08 Dec 2014
+Trading date :09 Dec 2014
+Trading date :10 Dec 2014
+Trading date :11 Dec 2014
+Trading date :12 Dec 2014
+Trading date :15 Dec 2014
+Final Portfolio Value: 702749.04
+Plotting Results...
+Max Drawdown(%) : 3.46
+Total Pnl(%) : -29.73
+Annual Return(%) : -16.14
+Profit Factor : 0.74
+Sortino Ratio : -3.19
+Beta : -0.45
+% Profitable : 0.43
+Base Return(%) : 18.90
+Sharpe Ratio : -1.96
+Annual Vol(%) : 8.24

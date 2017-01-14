@@ -1,0 +1,660 @@
+Loading Data from 2015-11-01 to 2016-11-06....
+Reading MMM.csv
+Reading MMP.csv
+Reading MMS.csv
+Reading MMT.csv
+Reading MMU.csv
+Reading MO.csv
+Reading MOD.csv
+Reading MOG.A.csv
+Reading MON.csv
+Reading MPA.csv
+Reading MQT.csv
+Reading MQY.csv
+Reading MRK.csv
+Reading MS.csv
+Reading MSD.csv
+Reading MSF.csv
+Reading MSI.csv
+Reading MSM.csv
+Reading MT.csv
+Reading MTB.csv
+Reading MTD.csv
+Reading MTG.csv
+Reading MTH.csv
+Reading MTN.csv
+Reading MTOR.csv
+Reading MTU.csv
+Reading MTW.csv
+Reading MTX.csv
+Reading MTZ.csv
+Reading MUA.csv
+Reading MUC.csv
+Reading MUE.csv
+Reading MUH.csv
+Reading MUJ.csv
+Reading MUR.csv
+Reading MVC.csv
+Reading MVT.csv
+Reading MXF.csv
+Reading MYC.csv
+Reading MYD.csv
+Reading MYE.csv
+Reading MYF.csv
+Reading MYI.csv
+Reading MYJ.csv
+Reading MYN.csv
+Reading NAD.csv
+Reading NAT.csv
+Reading NBR.csv
+Reading NC.csv
+Reading NCA.csv
+Reading NCI.csv
+Reading NCR.csv
+Reading NCS.csv
+Reading NEM.csv
+Reading NEU.csv
+Reading NFG.csv
+Reading NFX.csv
+Reading NHI.csv
+Reading NI.csv
+Reading NJR.csv
+Reading NKE.csv
+Reading NL.csv
+Reading NLS.csv
+Reading NLY.csv
+Reading NNN.csv
+Reading NOC.csv
+Reading NOK.csv
+Reading NOV.csv
+Reading NPK.csv
+Reading NRT.csv
+Reading NSC.csv
+Reading NSL.csv
+Reading NTT.csv
+Reading NUE.csv
+Reading NUV.csv
+Reading NVO.csv
+Reading NVR.csv
+Reading NVS.csv
+Reading NWN.csv
+Reading NXP.csv
+Reading NXQ.csv
+Reading NXR.csv
+Reading NYT.csv
+Reading O.csv
+Reading OA.csv
+Reading OCN.csv
+Reading OFC.csv
+Reading OFG.csv
+Reading OGE.csv
+Reading OHI.csv
+Reading OI.csv
+Reading OII.csv
+Reading OIS.csv
+Reading OKE.csv
+Reading OKS.csv
+Reading OLN.csv
+Reading OMC.csv
+Reading OMI.csv
+Reading OMN.csv
+Reading ORAN.csv
+Reading ORCL.csv
+Reading ORI.csv
+Reading OSK.csv
+Reading OXM.csv
+Reading OXY.csv
+Reading PAA.csv
+Reading PAG.csv
+Reading PBI.csv
+Reading PBR.A.csv
+Reading PBR.csv
+Reading PBT.csv
+Reading PCF.csv
+Reading PCG.csv
+Reading PEG.csv
+Reading PEI.csv
+Reading PEO.csv
+Reading PEP.csv
+Reading PFE.csv
+Reading PG.csv
+Reading PGR.csv
+Reading PHG.csv
+Reading PHI.csv
+Reading PHM.csv
+Reading PII.csv
+Reading PIM.csv
+Reading PIR.csv
+Reading PKD.csv
+Reading PKE.csv
+Reading PKG.csv
+Reading PKI.csv
+Reading PKX.csv
+Reading PLD.csv
+Reading PLT.csv
+Reading PMM.csv
+Reading PMO.csv
+Reading PNC.csv
+Reading PNM.csv
+Reading PNW.csv
+Reading POL.csv
+Reading POT.csv
+Reading PPG.csv
+Reading PPL.csv
+Reading PPR.csv
+Reading PPS.csv
+Reading PPT.csv
+Reading PQ.csv
+Reading PRA.csv
+Reading PSA.csv
+Reading PSO.csv
+Reading PUK.csv
+Reading PVH.csv
+Reading PWR.csv
+Reading PX.csv
+Reading PXD.csv
+Reading PZE.csv
+Reading QTM.csv
+Reading R.csv
+Reading RAD.csv
+Reading RAI.csv
+Reading RAS.csv
+Reading RBC.csv
+Reading RCL.csv
+Reading RCS.csv
+Reading RDN.csv
+Reading RE.csv
+Reading REG.csv
+Reading RELX.csv
+Reading RES.csv
+Reading REV.csv
+Reading RF.csv
+Reading RGR.csv
+Reading RGS.csv
+Reading RHI.csv
+Reading RHT.csv
+Reading RIG.csv
+Reading RIO.csv
+Reading RJF.csv
+Reading RL.csv
+Reading RLI.csv
+Reading RMD.csv
+Reading RMT.csv
+Reading RNR.csv
+Reading ROG.csv
+Reading ROK.csv
+Reading ROL.csv
+Reading ROP.csv
+Reading RPM.csv
+Reading RPT.csv
+Reading RRC.csv
+Reading RS.csv
+Reading RSG.csv
+Reading RT.csv
+Reading RTEC.csv
+Reading RTN.csv
+Reading RVT.csv
+Reading RWT.csv
+Reading RY.csv
+Reading RYN.csv
+Reading SAH.csv
+Reading SAM.csv
+Reading SAN.csv
+Reading SAP.csv
+Reading SBR.csv
+Reading SBW.csv
+Reading SCG.csv
+Reading SCI.csv
+Reading SCS.csv
+Reading SEE.csv
+Reading SFE.csv
+Reading SGU.csv
+Reading SGY.csv
+Reading SHW.csv
+Reading SIX.csv
+Reading SJI.csv
+Reading SJM.csv
+Reading SJR.csv
+Reading SJT.csv
+Reading SKM.csv
+Reading SKT.csv
+Reading SKX.csv
+Reading SLB.csv
+Reading SLF.csv
+Reading SLG.csv
+Reading SM.csv
+Reading SMG.csv
+Reading SNA.csv
+Reading SNE.csv
+Reading SO.csv
+Reading SON.csv
+Reading SOR.csv
+Reading SPG.csv
+Reading SPGI.csv
+Reading SPH.csv
+Reading SPN.csv
+Reading SPXC.csv
+Reading SR.csv
+Reading SRE.csv
+Reading SRI.csv
+Reading SSD.csv
+Reading SSL.csv
+Reading SSP.csv
+Reading STC.csv
+Reading STI.csv
+Reading STJ.csv
+Reading STM.csv
+Reading STT.csv
+Reading STZ.csv
+Reading SU.csv
+Reading SUI.csv
+Reading SUP.csv
+Reading SVU.csv
+Reading SWC.csv
+Reading SWK.csv
+Reading SWM.csv
+Reading SWN.csv
+Reading SWX.csv
+Reading SWZ.csv
+Reading SXI.csv
+Reading SXT.csv
+Reading SYK.csv
+Reading SYT.csv
+Reading SYY.csv
+Reading T.csv
+Reading TAP.csv
+Reading TBI.csv
+Reading TCB.csv
+Reading TCO.csv
+Reading TD.csv
+Reading TDF.csv
+Reading TDW.csv
+Reading TDY.csv
+Reading TEF.csv
+Reading TEI.csv
+Reading TEN.csv
+Reading TEO.csv
+Reading TER.csv
+Reading TEVA.csv
+Reading TEX.csv
+Reading TFX.csv
+Reading TG.csv
+Reading TGI.csv
+Reading TGNA.csv
+Reading TGT.csv
+Reading THC.csv
+Reading THG.csv
+Reading THO.csv
+Reading TIF.csv
+Reading TJX.csv
+Reading TK.csv
+Reading TKR.csv
+Reading TLI.csv
+Reading TLK.csv
+Reading TM.csv
+Reading TMK.csv
+Reading TMO.csv
+Reading TNC.csv
+Reading TOL.csv
+Reading TOT.csv
+Reading TR.csv
+Reading TRK.csv
+Reading TRN.csv
+Reading TRP.csv
+Reading TRV.csv
+Reading TSI.csv
+Reading TSM.csv
+Reading TSN.csv
+Reading TSO.csv
+Reading TSS.csv
+Reading TTC.csv
+Reading TTI.csv
+Reading TUP.csv
+Reading TV.csv
+Reading TVC.csv
+Reading TWI.csv
+Reading TXT.csv
+Reading TY.csv
+Reading TYL.csv
+Reading UDR.csv
+Reading UFI.csv
+Reading UGI.csv
+Reading UHS.csv
+Reading UHT.csv
+Reading UIS.csv
+Reading UL.csv
+Reading UMC.csv
+Reading UN.csv
+Reading UNH.csv
+Reading UNP.csv
+Reading UNT.csv
+Reading UPS.csv
+Reading URI.csv
+Reading USA.csv
+Reading USB.csv
+Reading USG.csv
+Reading USM.csv
+Reading UTX.csv
+Reading UVV.csv
+Reading VAL.csv
+Reading VAR.csv
+Reading VBF.csv
+Reading VFC.csv
+Reading VGM.csv
+Reading VGR.csv
+Reading VIV.csv
+Reading VKQ.csv
+Reading VLO.csv
+Reading VLY.csv
+Reading VMC.csv
+Reading VMI.csv
+Reading VNO.csv
+Reading VRX.csv
+Reading VSH.csv
+Reading VTR.csv
+Reading VVC.csv
+Reading VVI.csv
+Reading VVR.csv
+Reading VZ.csv
+Reading WAB.csv
+Reading WAT.csv
+Reading WBS.csv
+Reading WCC.csv
+Reading WDR.csv
+Reading WEC.csv
+Reading WFC.csv
+Reading WG.csv
+Reading WGL.csv
+Reading WGO.csv
+Reading WHR.csv
+Reading WIT.csv
+Reading WMB.csv
+Reading WMK.csv
+Reading WMT.csv
+Reading WNC.csv
+Reading WOR.csv
+Reading WR.csv
+Reading WRB.csv
+Reading WRE.csv
+Reading WRI.csv
+Reading WSM.csv
+Reading WSO.csv
+Reading WST.csv
+Reading WTM.csv
+Reading WTS.csv
+Reading WWE.csv
+Reading WWW.csv
+Reading WY.csv
+Reading X.csv
+Reading XEL.csv
+Reading XOM.csv
+Reading XRX.csv
+Reading YUM.csv
+Reading ZF.csv
+Initial funds: 1000000.00
+------------------------------------
+Evaluating...
+Trading date :05 Nov 2015
+Trading date :06 Nov 2015
+Trading date :09 Nov 2015
+Trading date :10 Nov 2015
+Trading date :11 Nov 2015
+Trading date :12 Nov 2015
+Trading date :13 Nov 2015
+Trading date :16 Nov 2015
+Trading date :17 Nov 2015
+Trading date :18 Nov 2015
+Trading date :19 Nov 2015
+Trading date :20 Nov 2015
+Trading date :23 Nov 2015
+Trading date :24 Nov 2015
+Trading date :25 Nov 2015
+Trading date :27 Nov 2015
+Trading date :30 Nov 2015
+Trading date :01 Dec 2015
+Trading date :02 Dec 2015
+Trading date :03 Dec 2015
+Trading date :04 Dec 2015
+Trading date :07 Dec 2015
+Trading date :08 Dec 2015
+Trading date :09 Dec 2015
+Trading date :10 Dec 2015
+Trading date :11 Dec 2015
+Trading date :14 Dec 2015
+Trading date :15 Dec 2015
+Trading date :16 Dec 2015
+Trading date :18 Dec 2015
+Trading date :21 Dec 2015
+Trading date :22 Dec 2015
+Trading date :23 Dec 2015
+Trading date :24 Dec 2015
+Trading date :28 Dec 2015
+Trading date :29 Dec 2015
+Trading date :30 Dec 2015
+Trading date :31 Dec 2015
+Trading date :04 Jan 2016
+Trading date :05 Jan 2016
+Trading date :06 Jan 2016
+Trading date :07 Jan 2016
+Trading date :08 Jan 2016
+Trading date :11 Jan 2016
+Trading date :12 Jan 2016
+Trading date :13 Jan 2016
+Trading date :14 Jan 2016
+Trading date :15 Jan 2016
+Trading date :19 Jan 2016
+Trading date :20 Jan 2016
+Trading date :21 Jan 2016
+Trading date :22 Jan 2016
+Trading date :25 Jan 2016
+Trading date :26 Jan 2016
+Trading date :27 Jan 2016
+Trading date :28 Jan 2016
+Trading date :29 Jan 2016
+Trading date :01 Feb 2016
+Trading date :02 Feb 2016
+Trading date :03 Feb 2016
+Trading date :04 Feb 2016
+Trading date :05 Feb 2016
+Trading date :08 Feb 2016
+Trading date :09 Feb 2016
+Trading date :10 Feb 2016
+Trading date :11 Feb 2016
+Trading date :12 Feb 2016
+Trading date :16 Feb 2016
+Trading date :17 Feb 2016
+Trading date :18 Feb 2016
+Trading date :19 Feb 2016
+Trading date :22 Feb 2016
+Trading date :23 Feb 2016
+Trading date :24 Feb 2016
+Trading date :25 Feb 2016
+Trading date :26 Feb 2016
+Trading date :29 Feb 2016
+Trading date :01 Mar 2016
+Trading date :02 Mar 2016
+Trading date :03 Mar 2016
+Trading date :04 Mar 2016
+Trading date :07 Mar 2016
+Trading date :08 Mar 2016
+Trading date :09 Mar 2016
+Trading date :10 Mar 2016
+Trading date :11 Mar 2016
+Trading date :14 Mar 2016
+Trading date :15 Mar 2016
+Trading date :16 Mar 2016
+Trading date :17 Mar 2016
+Trading date :18 Mar 2016
+Trading date :21 Mar 2016
+Trading date :22 Mar 2016
+Trading date :23 Mar 2016
+Trading date :24 Mar 2016
+Trading date :28 Mar 2016
+Trading date :29 Mar 2016
+Trading date :30 Mar 2016
+Trading date :31 Mar 2016
+Trading date :01 Apr 2016
+Trading date :04 Apr 2016
+Trading date :05 Apr 2016
+Trading date :06 Apr 2016
+Trading date :07 Apr 2016
+Trading date :08 Apr 2016
+Trading date :11 Apr 2016
+Trading date :12 Apr 2016
+Trading date :13 Apr 2016
+Trading date :14 Apr 2016
+Trading date :15 Apr 2016
+Trading date :18 Apr 2016
+Trading date :19 Apr 2016
+Trading date :20 Apr 2016
+Trading date :21 Apr 2016
+Trading date :22 Apr 2016
+Trading date :25 Apr 2016
+Trading date :26 Apr 2016
+Trading date :27 Apr 2016
+Trading date :28 Apr 2016
+Trading date :29 Apr 2016
+Trading date :02 May 2016
+Trading date :03 May 2016
+Trading date :04 May 2016
+Trading date :05 May 2016
+Trading date :06 May 2016
+Trading date :09 May 2016
+Trading date :10 May 2016
+Trading date :11 May 2016
+Trading date :12 May 2016
+Trading date :13 May 2016
+Trading date :16 May 2016
+Trading date :17 May 2016
+Trading date :18 May 2016
+Trading date :19 May 2016
+Trading date :20 May 2016
+Trading date :23 May 2016
+Trading date :24 May 2016
+Trading date :25 May 2016
+Trading date :26 May 2016
+Trading date :27 May 2016
+Trading date :31 May 2016
+Trading date :01 Jun 2016
+Trading date :02 Jun 2016
+Trading date :03 Jun 2016
+Trading date :06 Jun 2016
+Trading date :07 Jun 2016
+Trading date :08 Jun 2016
+Trading date :09 Jun 2016
+Trading date :10 Jun 2016
+Trading date :13 Jun 2016
+Trading date :14 Jun 2016
+Trading date :15 Jun 2016
+Trading date :16 Jun 2016
+Trading date :17 Jun 2016
+Trading date :20 Jun 2016
+Trading date :21 Jun 2016
+Trading date :22 Jun 2016
+Trading date :23 Jun 2016
+Trading date :24 Jun 2016
+Trading date :27 Jun 2016
+Trading date :28 Jun 2016
+Trading date :29 Jun 2016
+Trading date :30 Jun 2016
+Trading date :01 Jul 2016
+Trading date :05 Jul 2016
+Trading date :06 Jul 2016
+Trading date :07 Jul 2016
+Trading date :08 Jul 2016
+Trading date :11 Jul 2016
+Trading date :12 Jul 2016
+Trading date :13 Jul 2016
+Trading date :14 Jul 2016
+Trading date :15 Jul 2016
+Trading date :18 Jul 2016
+Trading date :19 Jul 2016
+Trading date :20 Jul 2016
+Trading date :21 Jul 2016
+Trading date :22 Jul 2016
+Trading date :25 Jul 2016
+Trading date :26 Jul 2016
+Trading date :27 Jul 2016
+Trading date :28 Jul 2016
+Trading date :29 Jul 2016
+Trading date :01 Aug 2016
+Trading date :02 Aug 2016
+Trading date :03 Aug 2016
+Trading date :04 Aug 2016
+Trading date :05 Aug 2016
+Trading date :08 Aug 2016
+Trading date :09 Aug 2016
+Trading date :10 Aug 2016
+Trading date :11 Aug 2016
+Trading date :12 Aug 2016
+Trading date :15 Aug 2016
+Trading date :16 Aug 2016
+Trading date :17 Aug 2016
+Trading date :18 Aug 2016
+Trading date :19 Aug 2016
+Trading date :22 Aug 2016
+Trading date :23 Aug 2016
+Trading date :24 Aug 2016
+Trading date :25 Aug 2016
+Trading date :26 Aug 2016
+Trading date :29 Aug 2016
+Trading date :30 Aug 2016
+Trading date :31 Aug 2016
+Trading date :01 Sep 2016
+Trading date :02 Sep 2016
+Trading date :06 Sep 2016
+Trading date :07 Sep 2016
+Trading date :08 Sep 2016
+Trading date :09 Sep 2016
+Trading date :12 Sep 2016
+Trading date :13 Sep 2016
+Trading date :14 Sep 2016
+Trading date :15 Sep 2016
+Trading date :16 Sep 2016
+Trading date :19 Sep 2016
+Trading date :20 Sep 2016
+Trading date :21 Sep 2016
+Trading date :22 Sep 2016
+Trading date :23 Sep 2016
+Trading date :26 Sep 2016
+Trading date :27 Sep 2016
+Trading date :28 Sep 2016
+Trading date :29 Sep 2016
+Trading date :30 Sep 2016
+Trading date :03 Oct 2016
+Trading date :04 Oct 2016
+Trading date :05 Oct 2016
+Trading date :06 Oct 2016
+Trading date :07 Oct 2016
+Trading date :10 Oct 2016
+Trading date :11 Oct 2016
+Trading date :12 Oct 2016
+Trading date :13 Oct 2016
+Trading date :14 Oct 2016
+Trading date :17 Oct 2016
+Trading date :18 Oct 2016
+Trading date :19 Oct 2016
+Trading date :20 Oct 2016
+Trading date :21 Oct 2016
+Trading date :24 Oct 2016
+Trading date :25 Oct 2016
+Trading date :26 Oct 2016
+Trading date :27 Oct 2016
+Trading date :28 Oct 2016
+Trading date :31 Oct 2016
+Trading date :01 Nov 2016
+Trading date :02 Nov 2016
+Trading date :03 Nov 2016
+Trading date :04 Nov 2016
+Final Portfolio Value: 993799.28
+Plotting Results...
+Max Drawdown(%) : 4.43
+Total Pnl(%) : -0.62
+Annual Return(%) : -0.62
+Profit Factor : 0.99
+Sortino Ratio : -0.10
+Beta : -0.01
+% Profitable : 0.46
+Base Return(%) : -0.78
+Sharpe Ratio : -0.06
+Annual Vol(%) : 11.20
