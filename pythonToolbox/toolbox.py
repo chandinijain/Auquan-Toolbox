@@ -64,7 +64,6 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
 
         # evaluate new position based on order and budget
         
-        slippage = back_data['LOW'].iloc[end - 1]
         price_curr = back_data['OPEN'].iloc[end]
         open_curr = back_data['OPEN'].iloc[end]
         close_curr = back_data['CLOSE'].iloc[end]
@@ -72,14 +71,14 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
         close_last = back_data['CLOSE'].iloc[end-1]
         high = back_data['HIGH'].iloc[end - 1]
         low = back_data['LOW'].iloc[end - 1]
-        slippage = (high - low)* 0.05
+        slippage = (high - low) * 0.05
         position_last = back_data['POSITION'].iloc[end - 1]
         pv_last = back_data['VALUE'].iloc[end-1]
         (position_curr, budget_curr, margin_curr, cost_to_trade) = execute_order(order, position_last, slippage, price_curr, budget_curr,margin_curr,logger)
 
         # set info in back data
         back_data['POSITION'].iloc[end] = position_curr
-        back_data['ORDER'].iloc[end] = order['QUANTITY']*order['SIGNAL']
+        back_data['ORDER'].iloc[end] = order['QUANTITY']*order['SIGNAL'] #this should only be true if the order succeeded?
         filled_order = position_curr - position_last
         back_data['FILLED_ORDER'].iloc[end] = filled_order
 
@@ -140,7 +139,7 @@ def commission():
 def margin_perc():
     return 1
 
-def execute_order(order, position, slippage, price, budget,margin,logger):
+def execute_order(order, position, slippage, price, budget, margin, logger):
     if pd.isnull(price[order['QUANTITY'] != 0]).values.any():
         logger.info('Cannot place order for markets with price unavailable! Order cancelled.')
         return position, budget, margin,0*position
@@ -149,7 +148,7 @@ def execute_order(order, position, slippage, price, budget,margin,logger):
         return position, budget, margin,0*position
     else:
         (position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell) = execute_sell(order, position, slippage, price, budget,margin,logger)
-        if budget_after_sell==0:
+        if budget_after_sell <= 0:
             logger.info(order['SIGNAL']*order['QUANTITY'])
             logger.info('You do not have any funds to trade! Buy Order cancelled.')
             return position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell
