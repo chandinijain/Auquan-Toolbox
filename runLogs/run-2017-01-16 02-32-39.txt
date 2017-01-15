@@ -1,0 +1,239 @@
+Downloading AAL data to file: ../historicalData/aal.csv
+Downloading AAP data to file: ../historicalData/aap.csv
+Downloading AAPL data to file: ../historicalData/aapl.csv
+Downloading ABBV data to file: ../historicalData/abbv.csv
+Downloading ABC data to file: ../historicalData/abc.csv
+Downloading ABK data to file: ../historicalData/abk.csv
+Downloading ABT data to file: ../historicalData/abt.csv
+Downloading ACN data to file: ../historicalData/acn.csv
+Downloading ADBE data to file: ../historicalData/adbe.csv
+File not found. Please check settings!
+../historicalData/adi.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading ADP data to file: ../historicalData/adp.csv
+Downloading ADS data to file: ../historicalData/ads.csv
+Downloading ADSK data to file: ../historicalData/adsk.csv
+Downloading ADT data to file: ../historicalData/adt.csv
+Downloading AEE data to file: ../historicalData/aee.csv
+Downloading AEP data to file: ../historicalData/aep.csv
+Downloading AES data to file: ../historicalData/aes.csv
+Downloading AET data to file: ../historicalData/aet.csv
+Downloading AFL data to file: ../historicalData/afl.csv
+Downloading AGN data to file: ../historicalData/agn.csv
+Downloading AIG data to file: ../historicalData/aig.csv
+Downloading AIV data to file: ../historicalData/aiv.csv
+Downloading AIZ data to file: ../historicalData/aiz.csv
+Downloading AJG data to file: ../historicalData/ajg.csv
+Downloading AKAM data to file: ../historicalData/akam.csv
+Downloading AKS data to file: ../historicalData/aks.csv
+Downloading ALB data to file: ../historicalData/alb.csv
+Downloading ALK data to file: ../historicalData/alk.csv
+Downloading ALL data to file: ../historicalData/all.csv
+Downloading ALLE data to file: ../historicalData/alle.csv
+Downloading ALTR data to file: ../historicalData/altr.csv
+Downloading ALXN data to file: ../historicalData/alxn.csv
+Downloading AMAT data to file: ../historicalData/amat.csv
+Downloading AMD data to file: ../historicalData/amd.csv
+Downloading AME data to file: ../historicalData/ame.csv
+Downloading AMG data to file: ../historicalData/amg.csv
+Downloading AMGN data to file: ../historicalData/amgn.csv
+Downloading AMP data to file: ../historicalData/amp.csv
+Downloading AMT data to file: ../historicalData/amt.csv
+Downloading AMZN data to file: ../historicalData/amzn.csv
+Downloading AN data to file: ../historicalData/an.csv
+Downloading ANF data to file: ../historicalData/anf.csv
+Downloading ANR data to file: ../historicalData/anr.csv
+Downloading ANTM data to file: ../historicalData/antm.csv
+Downloading AON data to file: ../historicalData/aon.csv
+Downloading APA data to file: ../historicalData/apa.csv
+Downloading APC data to file: ../historicalData/apc.csv
+Downloading APD data to file: ../historicalData/apd.csv
+File not found. Please check settings!
+../historicalData/aph.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading ARG data to file: ../historicalData/arg.csv
+Downloading ARNC data to file: ../historicalData/arnc.csv
+Downloading ATI data to file: ../historicalData/ati.csv
+Downloading ATVI data to file: ../historicalData/atvi.csv
+Downloading AV data to file: ../historicalData/av.csv
+Downloading AVB data to file: ../historicalData/avb.csv
+Downloading AVGO data to file: ../historicalData/avgo.csv
+Downloading AVP data to file: ../historicalData/avp.csv
+Downloading AVY data to file: ../historicalData/avy.csv
+Downloading AWK data to file: ../historicalData/awk.csv
+Downloading AXP data to file: ../historicalData/axp.csv
+File not found. Please check settings!
+../historicalData/aye.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading AZO data to file: ../historicalData/azo.csv
+Downloading BA data to file: ../historicalData/ba.csv
+Downloading BAC data to file: ../historicalData/bac.csv
+Downloading BAX data to file: ../historicalData/bax.csv
+Downloading BBBY data to file: ../historicalData/bbby.csv
+Downloading BBT data to file: ../historicalData/bbt.csv
+Downloading BBY data to file: ../historicalData/bby.csv
+Downloading BCR data to file: ../historicalData/bcr.csv
+Downloading BDX data to file: ../historicalData/bdx.csv
+Downloading BEN data to file: ../historicalData/ben.csv
+Downloading BF-B data to file: ../historicalData/bf-b.csv
+Downloading BHI data to file: ../historicalData/bhi.csv
+Downloading BIG data to file: ../historicalData/big.csv
+Downloading BIIB data to file: ../historicalData/biib.csv
+File not found. Please check settings!
+../historicalData/bjs.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading BLK data to file: ../historicalData/blk.csv
+Downloading BLL data to file: ../historicalData/bll.csv
+Downloading BMC data to file: ../historicalData/bmc.csv
+Downloading BMS data to file: ../historicalData/bms.csv
+Downloading BMY data to file: ../historicalData/bmy.csv
+Downloading BRCM data to file: ../historicalData/brcm.csv
+Downloading BRK-B data to file: ../historicalData/brk-b.csv
+File not found. Please check settings!
+../historicalData/bs.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading BTU data to file: ../historicalData/btu.csv
+Downloading BWA data to file: ../historicalData/bwa.csv
+Downloading BXLT data to file: ../historicalData/bxlt.csv
+Downloading BXP data to file: ../historicalData/bxp.csv
+Downloading CA data to file: ../historicalData/ca.csv
+Downloading CAG data to file: ../historicalData/cag.csv
+Downloading CAH data to file: ../historicalData/cah.csv
+Downloading CAM data to file: ../historicalData/cam.csv
+Downloading CAT data to file: ../historicalData/cat.csv
+Downloading CB data to file: ../historicalData/cb.csv
+File not found. Please check settings!
+../historicalData/cbe.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading CBS data to file: ../historicalData/cbs.csv
+Downloading CCE data to file: ../historicalData/cce.csv
+Downloading CCI data to file: ../historicalData/cci.csv
+Downloading CCK data to file: ../historicalData/cck.csv
+File not found. Please check settings!
+../historicalData/ccl.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading CELG data to file: ../historicalData/celg.csv
+File not found. Please check settings!
+../historicalData/ceph.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading CF data to file: ../historicalData/cf.csv
+Downloading CFG data to file: ../historicalData/cfg.csv
+Downloading CFN data to file: ../historicalData/cfn.csv
+Downloading CHD data to file: ../historicalData/chd.csv
+Downloading CHK data to file: ../historicalData/chk.csv
+Downloading CHRW data to file: ../historicalData/chrw.csv
+Downloading CHTR data to file: ../historicalData/chtr.csv
+Downloading CI data to file: ../historicalData/ci.csv
+Downloading CINF data to file: ../historicalData/cinf.csv
+Downloading CL data to file: ../historicalData/cl.csv
+Downloading CLF data to file: ../historicalData/clf.csv
+Downloading CLX data to file: ../historicalData/clx.csv
+Downloading CMA data to file: ../historicalData/cma.csv
+Downloading CMCSA data to file: ../historicalData/cmcsa.csv
+Downloading CMCSK data to file: ../historicalData/cmcsk.csv
+Downloading CME data to file: ../historicalData/cme.csv
+Downloading CMG data to file: ../historicalData/cmg.csv
+Downloading CMI data to file: ../historicalData/cmi.csv
+Downloading CMS data to file: ../historicalData/cms.csv
+Downloading CNC data to file: ../historicalData/cnc.csv
+Downloading CNP data to file: ../historicalData/cnp.csv
+Downloading CNX data to file: ../historicalData/cnx.csv
+Downloading COF data to file: ../historicalData/cof.csv
+Downloading COG data to file: ../historicalData/cog.csv
+Downloading COH data to file: ../historicalData/coh.csv
+Downloading COL data to file: ../historicalData/col.csv
+Downloading COO data to file: ../historicalData/coo.csv
+Downloading COP data to file: ../historicalData/cop.csv
+Downloading COST data to file: ../historicalData/cost.csv
+Downloading COTY data to file: ../historicalData/coty.csv
+Downloading COV data to file: ../historicalData/cov.csv
+Downloading CPB data to file: ../historicalData/cpb.csv
+Downloading CPGX data to file: ../historicalData/cpgx.csv
+File not found. Please check settings!
+../historicalData/cpwr.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading CSC data to file: ../historicalData/csc.csv
+Downloading CSCO data to file: ../historicalData/csco.csv
+Downloading CSRA data to file: ../historicalData/csra.csv
+Downloading CSX data to file: ../historicalData/csx.csv
+Downloading CTAS data to file: ../historicalData/ctas.csv
+Downloading CTL data to file: ../historicalData/ctl.csv
+Downloading CTSH data to file: ../historicalData/ctsh.csv
+Downloading CTXS data to file: ../historicalData/ctxs.csv
+Downloading CVC data to file: ../historicalData/cvc.csv
+Downloading CVH data to file: ../historicalData/cvh.csv
+Downloading CVS data to file: ../historicalData/cvs.csv
+Downloading CVX data to file: ../historicalData/cvx.csv
+Downloading CXO data to file: ../historicalData/cxo.csv
+Downloading DAL data to file: ../historicalData/dal.csv
+Downloading DD data to file: ../historicalData/dd.csv
+Downloading DE data to file: ../historicalData/de.csv
+Downloading DELL data to file: ../historicalData/dell.csv
+Downloading DF data to file: ../historicalData/df.csv
+Downloading DFS data to file: ../historicalData/dfs.csv
+Downloading DG data to file: ../historicalData/dg.csv
+Downloading DGX data to file: ../historicalData/dgx.csv
+Downloading DHI data to file: ../historicalData/dhi.csv
+Downloading DHR data to file: ../historicalData/dhr.csv
+Downloading DIS data to file: ../historicalData/dis.csv
+Downloading DISCA data to file: ../historicalData/disca.csv
+Downloading DISCK data to file: ../historicalData/disck.csv
+Downloading DLPH data to file: ../historicalData/dlph.csv
+Downloading DLR data to file: ../historicalData/dlr.csv
+Downloading DLTR data to file: ../historicalData/dltr.csv
+Downloading DNB data to file: ../historicalData/dnb.csv
+Downloading DNR data to file: ../historicalData/dnr.csv
+Downloading DO data to file: ../historicalData/do.csv
+Downloading DOV data to file: ../historicalData/dov.csv
+Downloading DOW data to file: ../historicalData/dow.csv
+Downloading DPS data to file: ../historicalData/dps.csv
+Downloading DRI data to file: ../historicalData/dri.csv
+Downloading DTE data to file: ../historicalData/dte.csv
+File not found. Please check settings!
+../historicalData/dtv.csv not found. Ommitting!
+Traceback (most recent call last):
+  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\get_data.py", line 34, in data_available
+    assert(download(m, file_name,logger))
+AssertionError
+Downloading DV data to file: ../historicalData/dv.csv
+Downloading DVA data to file: ../historicalData/dva.csv
+Downloading DVN data to file: ../historicalData/dvn.csv
+Downloading EA data to file: ../historicalData/ea.csv
+Downloading EBAY data to file: ../historicalData/ebay.csv
+Downloading ECL data to file: ../historicalData/ecl.csv
+Downloading ED data to file: ../historicalData/ed.csv
+Downloading EFX data to file: ../historicalData/efx.csv
+Downloading EIX data to file: ../historicalData/eix.csv
+Downloading EK data to file: ../historicalData/ek.csv
+Downloading EL data to file: ../historicalData/el.csv
+Downloading EMC data to file: ../historicalData/emc.csv
+Downloading EMN data to file: ../historicalData/emn.csv
+Downloading EMR data to file: ../historicalData/emr.csv
+Downloading ENDP data to file: ../historicalData/endp.csv

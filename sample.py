@@ -9,9 +9,9 @@ def settings():
     exchange = "nasdaq"
     # Stocks to download data for. Empty array if you want to download
     # all stocks for the exchange (~900 stocks)
-    markets = []
+    #markets = []
     #markets = ['AAPL','AB','ABC','ABM','ABT','ABX','ADC','ADM','ADX','AEE','AEG','AEM','AEO','AEP','AES','AET','AF','AFG','AFL','AGM','AGU','AIG','AIN','AIR']
-    markets = ['a', 'aapl', 'aeg', 'ain', 'air']
+    markets = []
     date_start = '2009-11-01'   # Date to start the backtest
     date_end = '2016-11-06'     # Date to end the backtest
     lookback = 120               # Number of days you want historical data for
@@ -89,7 +89,7 @@ def trading_strategy(lookback_data):
         # print(position_curr)
         # print(order['QUANTITY'])
         # print(order['SIGNAL'])
-        print(order['PRICE'])
+        # print(order['PRICE'])
         return order
 
 

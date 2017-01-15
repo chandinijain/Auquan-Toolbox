@@ -27,10 +27,9 @@ def data_available(exchange, markets,logger):
         file_name = '%s%s.csv'%(dir_name, m.lower())
         if not os.path.exists(file_name):
             try:
-                assert(download(exchange, m, file_name,logger)),"%s not found. Please check settings!"%file_name
+                assert(download(exchange, m, file_name,logger))
             except AssertionError:
-                logger.exception("%s not found. Please check settings!"%file_name)
-                raise      
+                logger.exception("%s not found. Ommitting!"%file_name)   
     return True
 
 def download_security_list(exchange, logger):
@@ -73,11 +72,7 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
     assert(download_security_list(exchange, logger))
     if len(markets)==0:
         file_name = '%s/%s.txt'%(exchange.lower(), exchange.lower())
-        
         markets = [line.strip() for line in open(file_name)]
-        # with open(file_name) as f:
-        #     markets = f.read().splitlines()
- 
 
     markets = [m.upper() for m in markets]
     features = ['OPEN', 'CLOSE', 'HIGH', 'LOW', 'VOLUME']
@@ -89,9 +84,9 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
                                               index=date_range,
                                               columns=markets)
     else:
-        assert data_available(exchange, markets, logger)
         market_to_drop = []
         for market in markets:
+            assert data_available(exchange, market, logger)
             logger.info('Reading %s.csv'%market)
             csv = pd.read_csv('%s/historicalData/%s.csv'%(exchange.lower(), market.lower()), index_col=0)
             csv.index = pd.to_datetime(csv.index)
