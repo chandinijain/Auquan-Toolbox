@@ -82,6 +82,8 @@ def profit_factor(daily_return):
     downside_return[downside_return > 0]= 0
     upside_return = daily_return.copy()
     upside_return[upside_return < 0]= 0
+    if downside_return.sum() == 0:
+        return 0
     return -(upside_return.sum())/(downside_return.sum())
 
 def profit_percent(daily_return):
@@ -90,6 +92,8 @@ def profit_percent(daily_return):
     upside_return = daily_return.copy()
     upside_return[upside_return < 0]= 0
     upside_return[upside_return > 0]= 1
+    if total_return.sum() == 0:
+        return 0
     return upside_return.sum()/total_return.sum()
 
 def baseline(exchange, base_index, date_range,logger):

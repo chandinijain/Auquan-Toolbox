@@ -52,12 +52,13 @@ def download_security_list(exchange, logger):
     else:
         return True
 
-def load_data(exchange, markets, start, end, lookback, logger, random=False):
+def load_data(exchange, markets, start, end, lookback, budget, logger, random=False):
 
     logger.info("Loading Data from %s to %s...."%(start,end))
 
+    # because there are some holidays adding some cushion to lookback
     try:
-        dates = [pd.to_datetime(start)-BDay(lookback), pd.to_datetime(end)]
+        dates = [pd.to_datetime(start)-BDay(lookback* 1.10), pd.to_datetime(end)]
     except ValueError:
         logger.exception("%s or %s is not valid date. Please check settings!"%(start, end))
         raise ValueError("%s or %s is not valid date. Please check settings!"%(start, end))
@@ -88,7 +89,7 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
                                               index=date_range,
                                               columns=markets)
     else:
-        assert data_available(exchange, markets,logger)
+        assert data_available(exchange, markets, logger)
         market_to_drop = []
         for market in markets:
             logger.info('Reading %s.csv'%market)
@@ -133,8 +134,8 @@ def load_data(exchange, markets, start, end, lookback, logger, random=False):
     back_data['FILLED_ORDER'] = pd.DataFrame(0, index=date_range, columns=markets)
     back_data['DAILY_PNL'] = pd.DataFrame(0, index=date_range, columns=markets)
     back_data['TOTAL_PNL'] = pd.DataFrame(0, index=date_range, columns=markets)
-    back_data['FUNDS'] = pd.Series(0, index=date_range)
-    back_data['VALUE'] = pd.Series(0, index=date_range)
+    back_data['FUNDS'] = pd.Series(budget, index=date_range)
+    back_data['VALUE'] = pd.Series(budget, index=date_range)
     back_data['MARGIN'] = pd.Series(0, index=date_range)
 
     if date_range[0] > dates[0]:

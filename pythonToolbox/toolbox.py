@@ -26,20 +26,34 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
 
     #Load data for backtest
    
-    (back_data, date_range) = load_data(exchange, markets, date_start, date_end, lookback,logger)
+    (back_data, date_range) = load_data(exchange, markets, date_start, date_end, lookback, budget, logger)
     logger.info('Initial funds: %0.2f'%budget)
     logger.info('------------------------------------')
     logger.info('Evaluating...')
 
     budget_curr = budget
     
-    position_curr = back_data['POSITION'].iloc[lookback - 1]
-    margin_curr = back_data['MARGIN'].iloc[lookback - 1]
-    back_data['VALUE'].iloc[0:lookback] = budget
-    back_data['FUNDS'].iloc[0:lookback] = budget
+    position_curr = None
+    margin_curr = None
+
     res = []
-    for end in range(lookback, date_range.size):
+    start_index = -1
+
+    for startDate in pd.date_range(start=date_start, end=date_end, freq='B'):
+        if startDate not in date_range:
+            logger.info(startDate.strftime('Trading date is a Holiday or data not present :%d %b %Y'))
+            continue
+        end = date_range.get_loc(startDate)
+        if start_index < 0:
+            start_index = end
+
         start = end - lookback
+        if start < 0:
+            start = 0
+
+        if position_curr is None:
+            position_curr = back_data['POSITION'].iloc[end-1]
+            margin_curr = back_data['MARGIN'].iloc[end-1]
 
         # get order and verify
         lookback_data = {feature: data[start: end] for feature, data in back_data.items()}
@@ -52,7 +66,6 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
             raise
         try:
             assert((order['PRICE']>=0).all())
-            assert((order['QUANTITY']>=0).all()),"Quantity cannot be negative"
         except AssertionError:
             logger.info("Price cannot be negative")
             raise
@@ -73,7 +86,6 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
         low = back_data['LOW'].iloc[end - 1]
         slippage = (high - low) * 0.05
         position_last = back_data['POSITION'].iloc[end - 1]
-        pv_last = back_data['VALUE'].iloc[end-1]
         (position_curr, budget_curr, margin_curr, cost_to_trade) = execute_order(order, position_last, slippage, price_curr, budget_curr,margin_curr,logger)
 
         # set info in back data
@@ -124,11 +136,11 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
             
     logger.info('Final Portfolio Value: %0.2f'%value_curr)
     #writejson(back_data,budget)
-    writecsv({feature: data[lookback-1: end+1] for feature, data in back_data.items()},budget)
+    writecsv({feature: data[start_index-1: end+1] for feature, data in back_data.items()},budget)
 
     logger.info('Plotting Results...')
 
-    loadgui({feature: data[lookback-1: end+1] for feature, data in back_data.items()}, exchange, base_index, budget,logger)
+    loadgui({feature: data[start_index-1: end+1] for feature, data in back_data.items()}, exchange, base_index, budget,logger)
 
         #back_data['DAILY_PNL'][date_start:date_end], back_data['TOTAL_PNL'][date_start:date_end], back_data['POSITION'][date_start:date_end], exchange, base_index, budget,logger)
 
