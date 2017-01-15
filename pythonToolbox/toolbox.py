@@ -157,15 +157,15 @@ def execute_order(order, position, slippage, price, budget, margin, logger):
         return position, budget, margin,0*position
     elif budget <=0:
         logger.info('You do not have enough funds to trade! Please sell some stock')
+
+    (position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell) = execute_sell(order, position, slippage, price, budget,margin,logger)
+    if budget_after_sell <= 0:
+        logger.info(order['SIGNAL']*order['QUANTITY'])
+        logger.info('You do not have any funds to trade! Buy Order cancelled.')
+        return position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell
     else:
-        (position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell) = execute_sell(order, position, slippage, price, budget,margin,logger)
-        if budget_after_sell <= 0:
-            logger.info(order['SIGNAL']*order['QUANTITY'])
-            logger.info('You do not have any funds to trade! Buy Order cancelled.')
-            return position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell
-        else:
-            (position_after_buy, budget_after_buy, margin_after_buy, cost_to_buy) = execute_buy(order, position_after_sell, slippage, price, budget_after_sell, margin_after_sell,logger)
-            return position_after_buy, budget_after_buy, margin_after_buy, cost_to_sell+cost_to_buy
+        (position_after_buy, budget_after_buy, margin_after_buy, cost_to_buy) = execute_buy(order, position_after_sell, slippage, price, budget_after_sell, margin_after_sell,logger)
+        return position_after_buy, budget_after_buy, margin_after_buy, cost_to_sell+cost_to_buy
 
 def execute_sell(order, position, slippage, price, budget,margin,logger):
     position_curr = position.copy()
@@ -223,6 +223,7 @@ def execute_buy(order, position, slippage, price, budget, margin,logger):
         order_value = ((position_curr-position) * price).sum()
         total_commission=adj_commission.sum()
         total_slippage = adj_slippage.sum()
+        margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()*margin_perc()
 
     #check if you can execute order to buyback short sells
     if ((order_value - (margin-margin_call)) + total_commission + total_slippage) >= budget:
