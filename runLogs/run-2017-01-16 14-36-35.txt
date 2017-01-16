@@ -1,0 +1,73 @@
+Loading Data from 2009-11-01 to 2016-11-06....
+Reading A.csv
+Reading AAL.csv
+Reading AAP.csv
+Reading AAPL.csv
+Reading ABBV.csv
+Reading ABC.csv
+Reading ABK.csv
+Reading ABT.csv
+Reading ACN.csv
+Reading ADBE.csv
+Reading ADM.csv
+Reading ADP.csv
+Reading ADS.csv
+Reading ADSK.csv
+Reading ADT.csv
+Reading AEE.csv
+Reading AEP.csv
+Reading AES.csv
+Reading AET.csv
+Reading AFL.csv
+Reading AGN.csv
+Reading AIG.csv
+Reading AIV.csv
+Reading AIZ.csv
+Reading AJG.csv
+Reading AKAM.csv
+Reading AKS.csv
+Reading ALB.csv
+Reading ALK.csv
+Reading ALL.csv
+Reading ALLE.csv
+Reading ALTR.csv
+Reading ALXN.csv
+Reading AMAT.csv
+Reading AMD.csv
+Reading AME.csv
+Reading AMG.csv
+Reading AMGN.csv
+Reading AMP.csv
+Reading AMT.csv
+Reading AMZN.csv
+Reading AN.csv
+Reading ANF.csv
+Reading ANR.csv
+Reading ANTM.csv
+Reading AON.csv
+Reading APA.csv
+Reading APC.csv
+Reading APD.csv
+Reading APOL.csv
+Reading ARG.csv
+Reading ARNC.csv
+Reading ATI.csv
+Reading ATVI.csv
+Reading AV.csv
+Reading AVB.csv
+Reading AVGO.csv
+Reading AVP.csv
+Reading AVY.csv
+Reading AWK.csv
+Reading AXP.csv
+Reading AYI.csv
+Reading AZO.csv
+Dropping AAL. Not Enough Data
+Dropping ABBV. Not Enough Data
+Dropping AGN. Not Enough Data
+Dropping ALLE. Not Enough Data
+Dropping AON. Not Enough Data
+Dropping AVGO. Not Enough Data
+Initial funds: 1000000.00
+------------------------------------
+Evaluating...

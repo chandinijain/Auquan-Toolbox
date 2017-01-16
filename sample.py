@@ -6,12 +6,11 @@ from pythonToolbox.toolbox import backtest
 
 def settings():
     # Exchange to download data for (nyse or nasdaq)
-    exchange = "nasdaq"
+    exchange = "stocks"
     # Stocks to download data for. Empty array if you want to download
     # all stocks for the exchange (~900 stocks)
-    markets = []
     #markets = ['AAPL','AB','ABC','ABM','ABT','ABX','ADC','ADM','ADX','AEE','AEG','AEM','AEO','AEP','AES','AET','AF','AFG','AFL','AGM','AGU','AIG','AIN','AIR']
-    markets = ['a', 'aapl', 'aeg', 'ain', 'air']
+    markets = ['A','AAL','AAP','AAPL','ABBV','ABC','ABK','ABT','ACN','ADBE','ADM','ADP','ADS','ADSK','ADT','AEE','AEP','AES','AET','AFL','AGN','AIG','AIV','AIZ','AJG','AKAM','AKS','ALB','ALK','ALL','ALLE','ALTR','ALXN','AMAT','AMD','AME','AMG','AMGN','AMP','AMT','AMZN','AN','ANF','ANR','ANTM','AON','APA','APC','APD','APOL','ARG','ARNC','ATI','ATVI','AV','AVB','AVGO','AVP','AVY','AWK','AXP','AYI','AZO']
     date_start = '2009-11-01'   # Date to start the backtest
     date_end = '2016-11-06'     # Date to end the backtest
     lookback = 120               # Number of days you want historical data for
