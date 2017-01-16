@@ -4,8 +4,8 @@ import numpy as np
 from pythonToolbox.toolbox import backtest
 
 def settings():
-    exchange = "nasdaq"           # Exchange to download data for (nyse or nasdaq)
-    markets = ['aapl','aig','air','a']                # Stocks to download data for. 
+    exchange = "stocks"           # Exchange to download data for (nyse or nasdaq)
+    markets = ['A','AAPL']                # Stocks to download data for. 
                                 # Leave blank to download all stocks for the exchange (~900 stocks)
     date_start = '2012-01-03'   # Date to start the backtest
     date_end = '2016-11-06'     # Date to end the backtest
