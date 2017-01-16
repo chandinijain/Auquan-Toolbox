@@ -1,0 +1,226 @@
+Loading Data from 2012-01-03 to 2016-11-06....
+Reading A.csv
+Reading AAL.csv
+Dropping AAL. This stock did not exist before (start date -lookback days)
+Reading AAP.csv
+Reading AAPL.csv
+Reading ABBV.csv
+Dropping ABBV. This stock did not exist before (start date -lookback days)
+Reading ABC.csv
+Reading ABK.csv
+The market ABK doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading ABT.csv
+Reading ACN.csv
+Reading ADBE.csv
+Reading ADM.csv
+Reading ADP.csv
+Reading ADS.csv
+Reading ADSK.csv
+Reading ADT.csv
+Reading AEE.csv
+Reading AEP.csv
+Reading AES.csv
+Reading AET.csv
+Reading AFL.csv
+Reading AGN.csv
+Dropping AGN. This stock did not exist before (start date -lookback days)
+Reading AIG.csv
+Reading AIV.csv
+Reading AIZ.csv
+Reading AJG.csv
+Reading AKAM.csv
+Reading AKS.csv
+Reading ALB.csv
+Reading ALK.csv
+Reading ALL.csv
+Reading ALLE.csv
+Dropping ALLE. This stock did not exist before (start date -lookback days)
+Reading ALTR.csv
+The market ALTR doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading ALXN.csv
+Reading AMAT.csv
+Reading AMD.csv
+Reading AME.csv
+Reading AMG.csv
+Reading AMGN.csv
+Reading AMP.csv
+Reading AMT.csv
+The market AMT doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading AMZN.csv
+Reading AN.csv
+Reading ANF.csv
+Reading ANR.csv
+Reading ANTM.csv
+Reading AON.csv
+Dropping AON. This stock did not exist before (start date -lookback days)
+Reading APA.csv
+Reading APC.csv
+Reading APD.csv
+Reading APOL.csv
+Reading ARG.csv
+The market ARG doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading ARNC.csv
+Reading ATI.csv
+Reading ATVI.csv
+Reading AV.csv
+Reading AVB.csv
+Reading AVGO.csv
+Dropping AVGO. This stock did not exist before (start date -lookback days)
+Reading AVP.csv
+Reading AVY.csv
+Reading AWK.csv
+Reading AXP.csv
+Reading AYI.csv
+Reading AZO.csv
+Reading BA.csv
+Reading BAC.csv
+Reading BAX.csv
+Reading BBBY.csv
+Reading BBT.csv
+Reading BBY.csv
+Reading BCR.csv
+Reading BDX.csv
+Reading BEN.csv
+Reading BF-B.csv
+Reading BHI.csv
+Reading BIG.csv
+Reading BIIB.csv
+Reading BK.csv
+Reading BLK.csv
+Reading BLL.csv
+Reading BMC.csv
+The market BMC doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading BMS.csv
+Reading BMY.csv
+Reading BRCM.csv
+The market BRCM doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading BRK-B.csv
+Reading BSX.csv
+Reading BTU.csv
+The market BTU doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading BWA.csv
+Reading BXLT.csv
+Dropping BXLT. This stock did not exist before (start date -lookback days)
+Reading BXP.csv
+Reading C.csv
+Reading CA.csv
+Reading CAG.csv
+Reading CAH.csv
+Reading CAM.csv
+The market CAM doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CAT.csv
+Reading CB.csv
+Reading CBG.csv
+Reading CBS.csv
+Reading CCE.csv
+Dropping CCE. This stock did not exist before (start date -lookback days)
+Reading CCI.csv
+The market CCI doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CCK.csv
+Reading CELG.csv
+Reading CERN.csv
+Reading CF.csv
+Reading CFG.csv
+Dropping CFG. This stock did not exist before (start date -lookback days)
+Reading CFN.csv
+The market CFN doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CHD.csv
+Reading CHK.csv
+Reading CHRW.csv
+Reading CHTR.csv
+Dropping CHTR. This stock did not exist before (start date -lookback days)
+Reading CI.csv
+Reading CINF.csv
+Reading CL.csv
+Reading CLF.csv
+Reading CLX.csv
+Reading CMA.csv
+Reading CMCSA.csv
+Reading CMCSK.csv
+The market CMCSK doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CME.csv
+Reading CMG.csv
+Reading CMI.csv
+Reading CMS.csv
+Reading CNC.csv
+Reading CNP.csv
+Reading CNX.csv
+Reading COF.csv
+Reading COG.csv
+Reading COH.csv
+Reading COL.csv
+Reading COO.csv
+Reading COP.csv
+Reading COST.csv
+Reading COTY.csv
+Dropping COTY. This stock did not exist before (start date -lookback days)
+Reading COV.csv
+The market COV doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CPB.csv
+Reading CPGX.csv
+Dropping CPGX. This stock did not exist before (start date -lookback days)
+Reading CRM.csv
+Reading CSC.csv
+Reading CSCO.csv
+Reading CSRA.csv
+Dropping CSRA. This stock did not exist before (start date -lookback days)
+Reading CSX.csv
+Reading CTAS.csv
+Reading CTL.csv
+Reading CTSH.csv
+Reading CTXS.csv
+Reading CVC.csv
+The market CVC doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CVH.csv
+The market CVH doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading CVS.csv
+Reading CVX.csv
+Reading CXO.csv
+Reading D.csv
+Reading DAL.csv
+Reading DD.csv
+Reading DE.csv
+Reading DELL.csv
+The market DELL doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading DF.csv
+Reading DFS.csv
+Reading DG.csv
+Reading DGX.csv
+Reading DHI.csv
+Reading DHR.csv
+Reading DIS.csv
+Reading DISCA.csv
+Reading DISCK.csv
+Reading DLPH.csv
+Dropping DLPH. This stock did not exist before (start date -lookback days)
+Reading DLR.csv
+Reading DLTR.csv
+Reading DNB.csv
+Reading DNR.csv
+Reading DO.csv
+Reading DOV.csv
+Reading DOW.csv
+Reading DPS.csv
+Reading DRI.csv
+Reading DTE.csv
+Reading DUK.csv
+Reading DV.csv
+Reading DVA.csv
+Reading DVN.csv
+Reading EA.csv
+Reading EBAY.csv
+Reading ECL.csv
+Reading ED.csv
+Reading EFX.csv
+Reading EIX.csv
+Reading EK.csv
+The market EK doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading EL.csv
+Reading EMC.csv
+The market EMC doesnt have data for the whole duration. Subsituting missing dates with the last known data
+Reading EMN.csv
+Reading EMR.csv
+Reading ENDP.csv
+Dropping ENDP. This stock did not exist before (start date -lookback days)
+Reading EOG.csv
+Reading EP.csv
