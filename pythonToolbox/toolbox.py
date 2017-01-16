@@ -35,6 +35,7 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
     
     position_curr = None
     margin_curr = None
+    cost_to_trade = None
 
     res = []
     start_index = -1
@@ -54,11 +55,11 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
         if position_curr is None:
             position_curr = back_data['POSITION'].iloc[end-1]
             margin_curr = back_data['MARGIN'].iloc[end-1]
+            cost_to_trade = position_curr*0
 
         # get order and verify
         lookback_data = {feature: data[start: end] for feature, data in back_data.items()}
         order = trading_strategy(lookback_data)
-        order['QUANTITY'] = order['QUANTITY'].astype(int)
         try:
             assert((order['SIGNAL'].isin([-1,0,1])).all())
         except AssertionError:
@@ -70,10 +71,13 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
             logger.info("Price cannot be negative")
             raise
         try:
-            assert((order['QUANTITY']>=0).all())
+            assert(order['WEIGHTS']>=0).all() 
         except AssertionError:
-            logger.info("Quantity cannot be negative")
+            logger.info("Please check weights. Weights cannot be negative and should sum to <= 1")
             raise
+
+        if order['WEIGHTS'].sum()>1:
+            order['WEIGHTS'] = order['WEIGHTS']/order['WEIGHTS'].sum()
 
         # evaluate new position based on order and budget
         
@@ -86,15 +90,15 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
         low = back_data['LOW'].iloc[end - 1]
         slippage = (high - low) * 0.05
         position_last = back_data['POSITION'].iloc[end - 1]
+        value = budget_curr + margin_curr + (position_last * open_curr).sum()
+        order['QUANTITY'] = getquantity(order, price_curr, slippage,value,position_last, logger)
         (position_curr, budget_curr, margin_curr, cost_to_trade) = execute_order(order, position_last, slippage, price_curr, budget_curr,margin_curr,logger)
 
         # set info in back data
         back_data['POSITION'].iloc[end] = position_curr
-        back_data['ORDER'].iloc[end] = order['QUANTITY']*order['SIGNAL'] #this should only be true if the order succeeded?
+        back_data['ORDER'].iloc[end] = order['QUANTITY']
         filled_order = position_curr - position_last
         back_data['FILLED_ORDER'].iloc[end] = filled_order
-
-
 
         # calculate pnl
         pnl_curr = (position_curr * (close_curr  - open_curr) + position_last * (open_curr - close_last)) - cost_to_trade
@@ -108,7 +112,7 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
         back_data['MARGIN'].iloc[end] = margin_curr
 
         #portfolio value
-        value_curr = budget_curr + margin_curr + (position_curr * close_curr).sum()#back_data['TOTAL_PNL'].iloc[end].sum()
+        value_curr = budget_curr + margin_curr + (position_curr[position_curr>0] * close_curr[position_curr>0]).sum()
         back_data['VALUE'].iloc[end] = value_curr
 
         #cost
@@ -120,7 +124,7 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
             s = 'stocks         : %s'%markets+'\n'+\
             'today open     : %s'%open_curr.values+'\n'+\
             'today close    : %s'%close_curr.values+'\n'+\
-            'order          : %s'%(order['QUANTITY']*order['SIGNAL']).values+'\n'+\
+            'order          : %s'%order['QUANTITY'].values+'\n'+\
             'position       : %s'%position_curr.values+'\n'+\
             'cost to trade  : %0.2f'%cost_to_trade.sum()+'\n'+\
             'Available funds: %0.2f'%budget_curr+'\n'+\
@@ -151,21 +155,43 @@ def commission():
 def margin_perc():
     return 1
 
-def execute_order(order, position, slippage, price, budget, margin, logger):
-    if pd.isnull(price[order['QUANTITY'] != 0]).values.any():
-        logger.info('Cannot place order for markets with price unavailable! Order cancelled.')
-        return position, budget, margin,0*position
-    elif budget <=0:
-        logger.info('You do not have enough funds to trade! Please sell some stock')
-
-    (position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell) = execute_sell(order, position, slippage, price, budget,margin,logger)
-    if budget_after_sell <= 0:
-        logger.info(order['SIGNAL']*order['QUANTITY'])
-        logger.info('You do not have any funds to trade! Buy Order cancelled.')
-        return position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell
+def getquantity(order, price, slippage,value,position,logger):
+    weights = order['WEIGHTS']
+    cost_to_trade = slippage+commission()
+    if weights.sum()>0:
+        new_portfolio_value = (weights.sum()*value)/(weights*(price+cost_to_trade)/price).sum()
     else:
-        (position_after_buy, budget_after_buy, margin_after_buy, cost_to_buy) = execute_buy(order, position_after_sell, slippage, price, budget_after_sell, margin_after_sell,logger)
-        return position_after_buy, budget_after_buy, margin_after_buy, cost_to_sell+cost_to_buy
+        new_portfolio_value = 0
+    desired_position = weights*new_portfolio_value/price
+    quantity = (order['SIGNAL']*desired_position).astype(int) - position
+    return quantity.astype(int)
+
+def execute_order(order, position, slippage, price, budget, margin, logger):
+
+    trade_criteria = (np.sign(order['QUANTITY'])*price[order.index] <= np.sign(order['QUANTITY'])*order['PRICE'])
+    trade_criteria[np.sign(order['QUANTITY'])*price[order.index] > np.sign(order['QUANTITY'])*order['PRICE']] = order['PRICE'] ==0
+    
+    position_curr = position.copy()
+    position_curr[trade_criteria] += order['QUANTITY'][trade_criteria]
+    margin_curr = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()
+    total_commission = np.abs(position_curr - position) * commission()
+    slippage_adjusted_price = price + (np.sign(order['QUANTITY'])*slippage)
+    slippage_adjusted_price[slippage_adjusted_price < 0] = 0
+    adj_slippage = np.abs(position_curr - position)*np.abs(price - slippage_adjusted_price)
+    margin_call = margin_curr-margin
+    order_value = ((position_curr - position) * price).sum() + margin_call
+    cost_to_trade = total_commission + adj_slippage
+    return position_curr, budget - order_value - margin_call - cost_to_trade.sum(), margin_curr, cost_to_trade
+
+    # (position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell) = execute_sell(order, position, slippage, price, budget,margin,logger)
+    # if budget_after_sell <= 0:
+    #     logger.info(order['SIGNAL']*order['QUANTITY'])
+    #     logger.info('You do not have any funds to trade! Buy Order cancelled.')
+    #     return position_after_sell, budget_after_sell, margin_after_sell, cost_to_sell
+    # else:
+    #     (position_after_buy, budget_after_buy, margin_after_buy, cost_to_buy) = execute_buy(order, position_after_sell, slippage, price, budget_after_sell, margin_after_sell,logger)
+    #     return position_after_buy, budget_after_buy, margin_after_buy, cost_to_sell+cost_to_buy
+  
 
 def execute_sell(order, position, slippage, price, budget,margin,logger):
     position_curr = position.copy()
@@ -177,23 +203,21 @@ def execute_sell(order, position, slippage, price, budget,margin,logger):
     position_curr[trade_criteria_1 & trade_criteria_2] -= order['QUANTITY'][trade_criteria_1 & trade_criteria_2]
 
     #identify shortsell orders and calculate margin
-    margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()*margin_perc()
-    if (margin_call-margin)*(1-1/float(margin_perc()))  > budget:
-        logger.info(order['SIGNAL']*order['QUANTITY'])
-        logger.info('Short Sell order value exceeds available funds! Short Sell order cancelled.')
-        position_curr[ position_curr < 0] = position[ position_curr < 0]
-        margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()*margin_perc()
+    margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()
+    # if (margin_call-margin)  > budget:
+    #     logger.info(order['SIGNAL']*order['QUANTITY'])
+    #     logger.info('Short Sell order value exceeds available funds! Short Sell order cancelled.')
+    #     position_curr[ position_curr < 0] = position[ position_curr < 0]
+    #     margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()*margin_perc()
 
-    adj_commission = (position - position_curr) * commission()
+    adj_commission = np.abs(position_curr - position) * commission()
     slippage_adjusted_price = price - slippage
     slippage_adjusted_price[slippage_adjusted_price < 0] = 0
-    adj_slippage = ((position - position_curr)*(price - slippage_adjusted_price))
-    order_value = ((position-position_curr) * price).sum()
-    total_commission=adj_commission.sum()
-    total_slippage = adj_slippage.sum()
+    adj_slippage = np.abs(position_curr - position)*(price - slippage_adjusted_price)
+    order_value = (np.abs(position_curr - position) * price).sum()
    
     cost_to_sell = adj_commission + adj_slippage
-    return position_curr, budget + (order_value - (margin_call-margin)) - total_commission - total_slippage, margin_call, cost_to_sell
+    return position_curr, budget + (order_value - (margin_call-margin)) - cost_to_sell.sum(), margin_call, cost_to_sell
 
 def execute_buy(order, position, slippage, price, budget, margin,logger):
     position_curr = position.copy()
@@ -205,7 +229,7 @@ def execute_buy(order, position, slippage, price, budget, margin,logger):
     position_curr[trade_criteria_1 & trade_criteria_2] += order['QUANTITY'][trade_criteria_1 & trade_criteria_2]
     
     #identify shortsell orders and calculate margin
-    margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()*margin_perc()
+    margin_call = -(position_curr[position_curr < 0] * price[position_curr < 0]).sum()
 
     adj_commission = (position_curr-position) * commission()
     adj_slippage = ((position_curr-position) * slippage)
@@ -256,6 +280,7 @@ def writecsv(back_data,budget):
     results['Daily Returns'] = back_data['DAILY_PNL'].sum(axis=1)*100/budget
     results['Total Returns'] = back_data['TOTAL_PNL'].sum(axis=1)*100/budget
     results['Funds'] = back_data['FUNDS']
+    results['Margin'] = back_data['MARGIN']
     results['Portfolio Value'] = back_data['VALUE']
     for stock in back_data['DAILY_PNL'].columns.tolist():
         results['%s Position'%stock]= back_data['POSITION'][stock]
