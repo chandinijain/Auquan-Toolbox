@@ -98,8 +98,18 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
             csv.columns = [col.upper() for col in csv.columns]
             csv = csv.reindex(index=csv.index[::-1])
             features = [col.upper() for col in csv.columns]
+            market_first_date = csv.index[0]
+            if (market_first_date > (dates[0]-BDay(1)+BDay(1))):
+                market_to_drop.append(market)
+                logger.info('Dropping %s. This stock did not exist before (start date -lookback days)'%market)
+                continue
+            market_last_date = csv.index[-1]
+            back_fill_data = False
+            if market_last_date in date_range:
+                back_fill_data = True
+                logger.info('The market %s doesnt have data for the whole duration. Subsituting missing dates with the last known data'%market)
+
             for feature in features:
-                null_dates = pd.Series(False, index=date_range)
                 try:
                     if not(back_data.has_key(feature)):
                         back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
@@ -107,11 +117,8 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
                     if feature not in back_data:
                         back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
                 back_data[feature][market] = csv[feature][date_range]
-                null_dates = pd.isnull(back_data[feature][market])
-                if null_dates[dates[0]-BDay(1)+BDay(1)]:
-                    if not market in market_to_drop:
-                        market_to_drop.append(market)
-                    
+                if back_fill_data:
+                    back_data[feature].loc[market_last_date:date_range[-1], market] = back_data[feature].at[market_last_date, market]
 
         for m in market_to_drop: 
             logger.info('Dropping %s. Not Enough Data'%m)
