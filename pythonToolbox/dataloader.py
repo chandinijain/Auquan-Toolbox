@@ -52,6 +52,12 @@ def download_security_list(exchange, logger):
     else:
         return True
 
+def compatibleDictKeyCheck(dict, key):
+    try:
+        return dict.has_key(key)
+    except:
+        return key in dict
+
 def load_data(exchange, markets, start, end, lookback, budget, logger, random=False):
 
     logger.info("Loading Data from %s to %s...."%(start,end))
@@ -87,6 +93,8 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
                                               index=date_range,
                                               columns=markets)
     else:
+        for feature in features:
+            back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
         assert data_available(exchange, markets, logger)
         market_to_drop = []
         for market in markets:
@@ -99,32 +107,23 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
             market_first_date = csv.index[0]
             if (market_first_date > (dates[0]-BDay(1)+BDay(1))):
                 market_to_drop.append(market)
-                logger.info('Dropping %s. This stock did not exist before (start date -lookback days)'%market)
+                logger.info('Dropping %s. This stock did not start trading before (start date -lookback days)'%market)
                 continue
             market_last_date = csv.index[-1]
+            if (market_last_date < (dates[0] - BDay(1) + BDay(1))):
+                market_to_drop.append(market)
+                logger.info('Dropping %s. This stock terminated before (start date -lookback days)'%market)
+                continue
+
             back_fill_data = False
             if market_last_date in date_range:
                 back_fill_data = True
                 logger.info('The market %s doesnt have data for the whole duration. Subsituting missing dates with the last known data'%market)
 
-            null_dates = pd.Series(False, index=date_range)
             for feature in features:
-                try:
-                    if not(back_data.has_key(feature)):
-                        back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
-                except:
-                    if feature not in back_data:
-                        back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
                 back_data[feature][market] = csv[feature][date_range]
-                null_dates|= pd.isnull(back_data[feature][market]).any()
                 if back_fill_data:
                     back_data[feature].loc[market_last_date:date_range[-1], market] = back_data[feature].at[market_last_date, market]
-            # fill_dates = date_range[null_dates]
-            # for d in fill_dates:
-            #     ix = date_range.get_loc(d)
-            #     for feature in features:
-            #         back_data[feature].loc[d, market] = back_data['CLOSE'].at[date_range[ix-1], market]
-            #     back_data['VOLUME'].loc[d, market] = 0
 
         for m in market_to_drop: 
             logger.info('Dropping %s. Not Enough Data'%m)
@@ -151,8 +150,5 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
     back_data['FUNDS'] = pd.Series(budget, index=date_range)
     back_data['VALUE'] = pd.Series(budget, index=date_range)
     back_data['MARGIN'] = pd.Series(0, index=date_range)
-
-    if date_range[0] > dates[0]:
-        logger.info("Lookback exceeds Available data. Data starts from %s"%date_range[0])
 
     return back_data, date_range
