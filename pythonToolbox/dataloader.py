@@ -75,8 +75,6 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
         file_name = '%s/%s.txt'%(exchange.lower(), exchange.lower())
         
         markets = [line.strip() for line in open(file_name)]
-        # with open(file_name) as f:
-        #     markets = f.read().splitlines()
  
 
     markets = [m.upper() for m in markets]
@@ -109,6 +107,7 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
                 back_fill_data = True
                 logger.info('The market %s doesnt have data for the whole duration. Subsituting missing dates with the last known data'%market)
 
+            null_dates = pd.Series(False, index=date_range)
             for feature in features:
                 try:
                     if not(back_data.has_key(feature)):
@@ -117,8 +116,15 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
                     if feature not in back_data:
                         back_data[feature] = pd.DataFrame(index=date_range, columns=markets)
                 back_data[feature][market] = csv[feature][date_range]
+                null_dates|= pd.isnull(back_data[feature][market]).any()
                 if back_fill_data:
                     back_data[feature].loc[market_last_date:date_range[-1], market] = back_data[feature].at[market_last_date, market]
+            # fill_dates = date_range[null_dates]
+            # for d in fill_dates:
+            #     ix = date_range.get_loc(d)
+            #     for feature in features:
+            #         back_data[feature].loc[d, market] = back_data['CLOSE'].at[date_range[ix-1], market]
+            #     back_data['VOLUME'].loc[d, market] = 0
 
         for m in market_to_drop: 
             logger.info('Dropping %s. Not Enough Data'%m)
@@ -132,6 +138,7 @@ def load_data(exchange, markets, start, end, lookback, budget, logger, random=Fa
 
         dropped_dates = date_range[dates_to_drop]
         date_range = date_range[~dates_to_drop]
+        print(dropped_dates)
         for feature in features:
             back_data[feature] = back_data[feature].drop(dropped_dates)
 

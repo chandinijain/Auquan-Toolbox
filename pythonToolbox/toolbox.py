@@ -81,15 +81,21 @@ def backtest(exchange, markets, trading_strategy, date_start, date_end, lookback
 
         # evaluate new position based on order and budget
         
-        price_curr = back_data['OPEN'].iloc[end]
-        open_curr = back_data['OPEN'].iloc[end]
-        close_curr = back_data['CLOSE'].iloc[end]
-        open_last = back_data['OPEN'].iloc[end-1]
-        close_last = back_data['CLOSE'].iloc[end-1]
-        high = back_data['HIGH'].iloc[end - 1]
-        low = back_data['LOW'].iloc[end - 1]
+        try:
+            price_curr = back_data['OPEN'].iloc[end].astype(float)
+            open_curr = back_data['OPEN'].iloc[end].astype(float)
+            close_curr = back_data['CLOSE'].iloc[end].astype(float)
+            open_last = back_data['OPEN'].iloc[end-1].astype(float)
+            close_last = back_data['CLOSE'].iloc[end-1].astype(float)
+            high = back_data['HIGH'].iloc[end - 1].astype(float)
+            low = back_data['LOW'].iloc[end - 1].astype(float)
+        except ValueError:
+            logger.info("Data not formatted properly")
+            raise
+
+
         slippage = (high - low) * 0.05
-        position_last = back_data['POSITION'].iloc[end - 1]
+        position_last = back_data['POSITION'].iloc[end - 1].astype(int)
         value = budget_curr + margin_curr + (position_last * open_curr).sum()
         order['QUANTITY'] = getquantity(order, price_curr, slippage,value,position_last, logger)
         (position_curr, budget_curr, margin_curr, cost_to_trade) = execute_order(order, position_last, slippage, price_curr, budget_curr,margin_curr,logger)
@@ -160,10 +166,13 @@ def getquantity(order, price, slippage,value,position,logger):
     cost_to_trade = slippage+commission()
     if weights.sum()>0:
         new_portfolio_value = (weights.sum()*value)/(weights*(price+cost_to_trade)/price).sum()
+        desired_position = weights*new_portfolio_value/price
+        quantity = (order['SIGNAL']*desired_position) - position
     else:
         new_portfolio_value = 0
-    desired_position = weights*new_portfolio_value/price
-    quantity = (order['SIGNAL']*desired_position).astype(int) - position
+        quantity = - position
+        quantity.fillna(0)
+        print(quantity)
     return quantity.astype(int)
 
 def execute_order(order, position, slippage, price, budget, margin, logger):

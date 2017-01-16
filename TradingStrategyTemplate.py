@@ -5,213 +5,10 @@ from pythonToolbox.toolbox import backtest
 
 def settings():
     exchange = "stocks"           # Exchange to download data for (nyse or nasdaq)
-    markets = ['A',\
-'AAP',\
-'AAPL',\
-'ABC',\
-'ABT',\
-'ACN',\
-'ADBE',\
-'ADM',\
-'ADP',\
-'ADS',\
-'ADSK',\
-'ADT',\
-'AEE',\
-'AEP',\
-'AES',\
-'AET',\
-'AFL',\
-'AIG',\
-'AIV',\
-'AIZ',\
-'AJG',\
-'AKAM',\
-'AKS',\
-'ALB',\
-'ALK',\
-'ALL',\
-'ALXN',\
-'AMAT',\
-'AMD']
-# 'AME',\
-# 'AMG',\
-# 'AMGN',\
-# 'AMP',\
-# 'AMT',\
-# 'AMZN',\
-# 'AN',\
-# 'ANF',\
-# 'ANR',\
-# 'ANTM',\
-# 'AON',\
-# 'APA',\
-# 'APC',\
-# 'APD',\
-# 'APOL',\
-# 'ARG',\
-# 'ARNC',\
-# 'ATI',\
-# 'ATVI',\
-# 'AV',\
-# 'AVB',\
-# 'AVGO',\
-# 'AVP',\
-# 'AVY',\
-# 'AWK',\
-# 'AXP',\
-# 'AYI',\
-# 'AZO']
-# ,\
-# 'BA',\
-# 'BAC',\
-# 'BAX',\
-# 'BBBY',\
-# 'BBT',\
-# 'BBY',\
-# 'BCR',\
-# 'BDX',\
-# 'BEN',\
-# 'BF-B',\
-# 'BHI',\
-# 'BIG',\
-# 'BIIB',\
-# 'BK',\
-# 'BLK',\
-# 'BLL',\
-# 'BMC',\
-# 'BMS',\
-# 'BMY',\
-# 'BRCM',\
-# 'BRK-B',\
-# 'BSX',\
-# 'BTU',\
-# 'BWA',\
-# 'BXLT',\
-# 'BXP',\
-# 'C',\
-# 'CA',\
-# 'CAG',\
-# 'CAH',\
-# 'CAM',\
-# 'CAT',\
-# 'CB',\
-# 'CBG',\
-# 'CBS',\
-# 'CCE',\
-# 'CCI',\
-# 'CCK',\
-# 'CELG',\
-# 'CERN',\
-# 'CF',\
-# 'CFG',\
-# 'CFN',\
-# 'CHD',\
-# 'CHK',\
-# 'CHRW',\
-# 'CHTR',\
-# 'CI',\
-# 'CINF',\
-# 'CL',\
-# 'CLF',\
-# 'CLX',\
-# 'CMA',\
-# 'CMCSA',\
-# 'CMCSK',\
-# 'CME',\
-# 'CMG',\
-# 'CMI',\
-# 'CMS',\
-# 'CNC',\
-# 'CNP',\
-# 'CNX',\
-# 'COF',\
-# 'COG',\
-# 'COH',\
-# 'COL',\
-# 'COO',\
-# 'COP',\
-# 'COST',\
-# 'COTY',\
-# 'COV',\
-# 'CPB',\
-# 'CPGX',\
-# 'CRM',\
-# 'CSC',\
-# 'CSCO',\
-# 'CSRA',\
-# 'CSX',\
-# 'CTAS',\
-# 'CTL',\
-# 'CTSH',\
-# 'CTXS',\
-# 'CVC',\
-# 'CVH',\
-# 'CVS',\
-# 'CVX',\
-# 'CXO',\
-# 'D',\
-# 'DAL',\
-# 'DD',\
-# 'DE',\
-# 'DELL',\
-# 'DF',\
-# 'DFS',\
-# 'DG',\
-# 'DGX',\
-# 'DHI',\
-# 'DHR',\
-# 'DIS',\
-# 'DISCA',\
-# 'DISCK',\
-# 'DLPH',\
-# 'DLR',\
-# 'DLTR',\
-# 'DNB',\
-# 'DNR',\
-# 'DO',\
-# 'DOV',\
-# 'DOW',\
-# 'DPS',\
-# 'DRI',\
-# 'DTE',\
-# 'DUK',\
-# 'DV',\
-# 'DVA',\
-# 'DVN',\
-# 'EA',\
-# 'EBAY',\
-# 'ECL',\
-# 'ED',\
-# 'EFX',\
-# 'EIX',\
-# 'EK',\
-# 'EL',\
-# 'EMC',\
-# 'EMN',\
-# 'EMR',\
-# 'ENDP',\
-# 'EOG',\
-# 'EQIX',\
-# 'EQR',\
-# 'EQT',\
-# 'ES',\
-# 'ESRX',\
-# 'ESS',\
-# 'ESV',\
-# 'ETFC',\
-# 'ETN',\
-# 'ETR',\
-# 'EVHC',\
-# 'EW',\
-# 'EXC',\
-# 'EXPD',\
-# 'EXPE',\
-# 'EXR',\
-# 'F',\
-# 'FAST']                # Stocks to download data for. 
+    markets = ['A','AAPL','IBM','GOOG','C']
+        # Stocks to download data for. 
                                 # Leave blank to download all stocks for the exchange (~900 stocks)
-    date_start = '2012-01-03'   # Date to start the backtest
+    date_start = '2015-01-03'   # Date to start the backtest
     date_end = '2016-11-06'     # Date to end the backtest
     lookback = 120               # Number of days you want historical data for
 
@@ -261,9 +58,12 @@ def trading_strategy(lookback_data):
     sdev_p1 = np.std(markets_close[-period1 : ], axis=0)
 
     difference = avg_p1 - avg_p2
-    deviation = difference.copy()
-    deviation[np.abs(difference)<sdev_p1] = 0
-    deviation[np.abs(difference)>sdev_p1] = np.sign(difference)*(np.abs(difference)-sdev_p1)
+    deviation = pd.Series(0, index=lookback_data['POSITION'].columns)
+    criteria_1 = np.abs(difference)>sdev_p1
+    criteria_2 = np.sign(difference) == np.sign(lookback_data['POSITION'])
+    deviation[criteria_1] = difference
+    deviation[criteria_2] = difference
+
 
     total_deviation = np.absolute(deviation).sum()
     if total_deviation==0:
@@ -271,8 +71,8 @@ def trading_strategy(lookback_data):
     else:  
         order['WEIGHTS']= np.absolute(deviation/total_deviation)
         order['SIGNAL'] = np.sign(deviation)
-        order['PRICE'][order['SIGNAL']>0] = (avg_p1-sdev_p1)[order['SIGNAL']>0]
-        order['PRICE'][order['SIGNAL']<0] = (avg_p1+sdev_p1)[order['SIGNAL']<0]
+        # order['PRICE'][order['SIGNAL']>0] = (avg_p1-sdev_p1)[order['SIGNAL']>0]
+        # order['PRICE'][order['SIGNAL']<0] = (avg_p1+sdev_p1)[order['SIGNAL']<0]
 
         return order
 

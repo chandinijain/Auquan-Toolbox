@@ -1,7 +1,0 @@
-Loading Data from 2012-01-03 to 2016-11-06....
-File not found. Please check settings!
-stocks/historicalData/ceg.csv not found. Please check settings!
-Traceback (most recent call last):
-  File "C:\Python27\auquan-toolbox-python-master\Auquan-Toolbox\pythonToolbox\dataloader.py", line 30, in data_available
-    assert(download(exchange, m, file_name,logger)),"%s not found. Please check settings!"%file_name
-AssertionError: stocks/historicalData/ceg.csv not found. Please check settings!
